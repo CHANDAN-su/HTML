@@ -1,0 +1,123 @@
+<!DOCTYPE html>  <!-- define of document ex- HTML5 -->
+<html lang="en">  <!-- html ka language kon sa h english -> "en"  | root element bhi kahte h-->
+<head>  <!-- Content not show to on page -->
+    <meta charset="UTF-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <!--the brower tab the page is loadedin-->
+    <style>
+        div{
+            border: 2px solid red;
+        }
+        header{
+            border: 2px solid red;
+        }
+
+        .editor-note{
+            color: red;
+        }
+    </style>
+</head>
+<body> <!-- content that display-->
+    
+    <p>My cat is very grumpy</p>
+    <!-- <p> -> opening tag
+    </p> -> closeing tag
+    My cat is very grumpy -> condtant    
+    <p>My cat is very grumpy</p>  -> Element  -->
+
+    <!-- Nesting elements:-  -->
+    <!-- Do't use -->
+    <p>My cat is <strong>very  grumpy </p></strong>
+
+    <!-- Do use -->
+    <p>My cat is <strong>very</strong> grumpy </p>
+    
+    <!-- block level element -->
+    <div>My Cat is very gurmpy</div>
+    <header>My cat is very grumpy</header>
+
+    <!-- inline element -->
+    <a href="www.youtube.com">Facebook</a>
+    <label>Name</label>
+    <input type="text">
+    <button>btn</button>
+
+    <!-- Attributes 
+    class="editoe-note" -> attributes
+    class -> name and identifying name used to target the element
+    value -> value 
+
+    href -> address for the link
+    tittle -> Extra information about the link
+    target -> display the link-->
+    <p class="editor-note">My cat is very grumpy</p>
+    <a href="https://www.youtube.com/" tittle="youtube is best video" target="_blank">Youtube</a>
+
+    <!-- Boolean attributes   -> only have value
+        disabled -> boolean attributes -->
+    <input type="text" disabled>
+
+    
+    <!-- Single and double quotes-->
+
+    <!-- Single quotes -->
+    <a href='https://www.youtube.com/'></a>
+
+    <!-- Double quots -->
+    <a href="https://www.youtube.com/"></a>
+
+    <!-- NOT USE mix dingle quotes and double quotes
+    throw error 
+    <a href="https://www.youtube.com/'>Youtube</a> -->
+    
+
+    <!-- Whitespace -> not matter-->
+    <p>my cat is very          grumpy</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        
+        
+        Rem modi obcaecati velit.</p>
+
+    <!-- this in html comment -->
+
+    <!-- paragraph has to be wrapped element -->
+    <p>I am a paragraph , oh yes I am</p>
+
+    <!-- Heading has to be wrapped element -->
+    <h1>This is a First heading</h1>
+    <h2>This is a Second heading</h2>
+    <h3>This is a Thrith heading</h3>
+    <h4>This is a Four heading</h4>
+    <h5>This is a Five heading</h5>
+    <h6>This is a Six heading</h6>
+
+    <!-- bold text -->
+    <p>Lorem ipsum dolor sit, amet <b>consectetur adipisicing</b>  elit. Eum eveniet, nisi placeat sit commodi accusantium?</p>
+    <p>Lorem ipsum dolor sit, amet <strong>consectetur adipisicing</strong>  elit. Eum eveniet, nisi placeat sit commodi accusantium?</p>
+
+    <!-- itaic text -->
+    <p>Lorem ipsum dolor sit amet <i>consectetur adipisicing elit.</i> Autem impedit porro totam?</p>
+    <p>Lorem ipsum dolor sit amet <em>consectetur adipisicing elit.</em> Autem impedit porro totam?</p>
+
+    <!-- Text highlight -->
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing. <mark>Lorem, ipsum dolor.</mark>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <!-- underlined text -->
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing. <u>Lorem ipsum dolor sit amet consectetur adipisicing.</u>Lorem ipsum dolor sit amet consectetur adipisicing. </p>
+
+    <!-- Strike text -->
+    <p><strike>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente est odio nisi vero.</strike></p>
+
+    <!--  superscript text-->
+    <p>12 <sup>th</sup> </p>
+
+    <!-- subscript text -->
+    <p>H <sub>2</sub>O </p>
+
+    <!-- Delete text -->
+    <p>Lorem ipsum dolor sit amet. <del>Lorem ipsum dolor sit amet.</del> Lorem ipsum dolor sit amet.</p>
+
+    
+</body>
+</html>

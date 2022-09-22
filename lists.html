@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="20">
+    <title>Lists</title>
+</head>
+<body>
+
+    <div id="heading">
+    <h1>1. Unorder lists</h1>
+    <!-- unordered list -->
+        <ul>
+            <li>First item</li>
+            <li>Second itam</li>
+            <li>Third item</li>
+        </ul>
+    </div>
+
+    <!-- nested unorder list -->
+        <ul>
+            <li>Milk</li>  
+            <li>Cheeese
+                <ul type="square">   <!--attribute type -> square , circle , disc-->
+                    <li>Blue cheese</li>
+                    <li>Feta</li>
+                </ul>
+            </li>
+            <li>Mengo</li>
+            <li>Banana</li>
+        </ul>
+
+        <ul>
+            <li>First item</li>
+            <li>Second item
+                <ul>
+                    <li>Second item first subitem</li>
+                    <li>Second item Second subitem
+                        <ul type="square">
+                            <li>Second item Second subitem first sub-subitem</li>
+                            <li>Second item Second subitem second sub-subitem</li>
+                            <li>Second item Second subitem thirth sub-subitem</li>
+                        </ul>
+                    </li>
+                    <li>Second item thirth subitem</li>
+                </ul>
+            </li>
+            <li>Thirth tem</li>
+        </ul>
+
+        <!-- Ordered list inside unordered list -->
+        <ul>
+            <li>First item</li>
+            <li>Second item
+                <ol>
+                    <li>Second item first subitem</li>
+                    <li>Second item second subitem</li>
+                    <li>Second item thirth subitem</li>
+                </ol>
+            </li>
+            <li>Thirth item</li>
+        </ul>
+
+
+        <h1>2. Ordered list</h1>
+        <!-- ordered list -->
+        <ol>
+            <li>Fee</li>
+            <li>Fi</li>
+            <li>Fo</li>
+            <li>Fum</li>
+        </ol>
+
+        <!-- Using Roman Numeral type -->
+        <ol type="A"> <!--a , a ,I ,i-->
+            <li>Introduction</li>
+            <li>List ofGrievances</li>
+            <li>Conclusion</li>
+        </ol>
+
+        <!-- Using the start attribute -->
+        <ol type="1" start="6"> 
+            <li>Introduction</li>
+            <li>List ofGrievances</li>
+            <li>Conclusion</li>
+        </ol>
+
+        <!-- Using the rereversed attribute -->
+        <ol type="1" start="6" reversed> 
+            <li>Introduction</li>
+            <li>List ofGrievances</li>
+            <li>Conclusion</li>
+        </ol>
+
+        <!-- Nesting lists -->
+        <ol>
+            <li>First item</li>
+            <li>Second item
+                <ol type="a">
+                    <li>Second item first subitem</li>
+                    <li>Second item second subitem</li>
+                    <li>Second item thrid subitem</li>
+                </ol>
+            </li>
+            <li>Third item</li>
+        </ol>
+
+        <!-- Unordered list inside ordered list -->
+        <ol>
+            <li>First item</li>
+            <li>Second item
+                <ul type="square">
+                    <li>Second item first subitem</li>
+                    <li>Second item second subitem</li>
+                    <li>Second item thrid subitem</li>
+                </ul>
+            </li>
+            <li>Third item</li>
+        </ol>
+</body>
+</html>
