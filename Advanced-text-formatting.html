@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced text formatting</title>
+    <style>
+        dt:after {
+            content: " 👍 ";
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--
+    Description lists 
+    dl  -> in addition each term
+    dt  -> description term
+    dd  -> description definition
+    -->
+
+    <dl>
+        <dt>soliloquy</dt>
+        <dd>In drama, where a character speaks to themselves, representing their inner
+            thoughts or feelings and in the process relaying them to the audience (but not to
+            other characters.</dd>
+
+        <dt>monologue</dt>
+        <dd>In drama, where a character speaks their thoughts out loud to share them with
+            the audience and any other characters present.</dd>
+
+        <dt>aside</dt>
+        <dd>In drama, where a character shares a comment only with the audience for
+            humorous or dramatic effect. This is usually a feeling, thought, or piece of additional
+            background information.</dd>
+    </dl>
+
+    <!-- Multiple descriptions for one term -->
+    <dl>
+        <dt>aside</dt>
+        <dd>In drama, where a character shares a comment only with the
+            audience for humorous or dramatic effect. This is usually a feeling,
+            thought, or piece of additional background information. Lorem ipsum dolor sit amet. </dd>
+        <dd>In writing, a section of content that is related to the current
+            topic, but doesn't fit directly into the main flow of content so is
+            presented nearby (often in a box off to the side.)</dd>
+    </dl>
+
+    <!-- Multiple terms, single description -->
+    <dl>
+        <dt> Firefox</dt>
+        <dt>Mozilla Firefox</dt>
+        <dt>Fx</dt>
+        <dd>A free, open source, cross-platform, graphical web
+            browser developed by theMozilla Corporation and
+            hundreds of volunteers.
+        </dd>
+    </dl>
+
+
+    <!-- Wrapping name-value groups in div elements -->
+    <dl>
+        <div>
+            <dt>Name</dt>
+            <dd>Chandan thakur</dd>
+        </div>
+
+        <div>
+            <dt>Bron</dt>
+            <dd>2000</dd>
+        </div>
+
+        <div>
+            <dt>Birthplace</dt>
+            <dd>Jaipur</dd>
+        </div>
+
+        <div>
+            <dt>Color</dt>
+            <dd>Black</dd>
+        </div>
+    </dl>
+
+
+    <!-- Blockquotes 
+    yh batata h ki ye paragaft kis url se liya gaya h
+    cite aapn nhi dekha sakte h
+    yh browers hi dekha sakta h-->
+
+    <blockquote cite="https://en.wikipedia.org/wiki/What_Is_Life">
+        <h3>What's is life</h3>
+        <p>"What Is Life" is a song by English rock musician George Harrison from his 1970 triple album All Things Must
+            Pass. In many countries, it was issued as the second single from the album, in February 1971, becoming a
+            top-ten
+            hit in the United States, Canada and elsewhere, and topping singles charts in Australia and Switzerland. In
+            the
+            United Kingdom, "What Is Life" appeared as the B-side to "My Sweet Lord", which was the best-selling single
+            there of 1971. Harrison's backing musicians on the song include Eric Clapton and the entire Delaney & Bonnie
+            and
+            Friends band, with whom he had toured during the final months of the Beatles. Harrison co-produced the
+            recording
+            with Phil Spector, whose Wall of Sound production also employed a prominent string arrangement by John
+            Barham
+            and multiple acoustic rhythm guitars, played by Harrison's fellow Apple Records signings Badfinger.</p>
+    </blockquote>
+
+
+
+    <!-- Abbreviations
+    HTML KA FULLfron Hypertext marjup language hota HTML par mouse jayega ho bh HTML ka fullfrom show karega 
+    -->
+    <p>We use <abbr title="Hypertext Markup Language">HTML</abbr> to
+        structure our web documents.</p>
+    <p>I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen
+        with the chainsaw.</p>
+
+    <!-- Marking up contact details using address -->
+    <address>Chris Mills, Manchester, The Grim North, UK</address>
+
+    <address>
+        <p>Chris Mills <br>
+            Manchester <br>
+            The Grim North <br>
+            UK
+        </p>
+        <ul>
+            <li>Tel: 7073251686</li>
+            <li>Email: chandan7073251686@gmail.com</li>
+        </ul>
+    </address>
+
+
+    <!-- <div> is a block level non-semantic element -->
+    <!-- For example, imagine a shopping cart -->
+
+    <div class="shopping-cart">
+        <h2>Shopping cart</h2>
+        <ul>
+            <li>
+                <p><a href=""><strong>Sliver earings</strong></a> :$99.95</p>
+                <img src="#" alt="This img not show">
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- <br>: the line break element -->
+    <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Cum assumenda optio reprehenderit <br> praesentium voluptate
+        consequuntur accusantium <br> itaque sed dolores facere.</p>
+
+
+    <!-- <hr>: The Thematic Break (Horizontal Rule)element 
+        attributee
+        aling , color , size , width ,  noshade
+    -->
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, ab!</p>
+        <hr color="red" width="50%" align="left" size="3px">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, ipsa voluptas beatae dolor maxime adipisci?</p>
+
+        
+</body>
+
+</html>
