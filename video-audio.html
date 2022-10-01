@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML image , Image , How to work image">
+    <meta name="description" content="Larn HTML inage">
+    <meta name="author" content="Chandan thakur">
+    <!-- <meta http-equiv="refresh" content="45"> -->
+    <title>Vidao and Audio Content</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Video and audio content</h1>
+
+    <!-- Video  content use <video> element
+    attribute -> controls , src , width and heignt , autoplay ,
+    loop , muted , poster ...etc -->
+
+    <video src="/video/Wildlife.mp4" controls width="500" height="200" autoplay loop muted></video>
+
+    <video src="/video/Wildlife.mp4" controls width="500" height="200" poster="/Jellyfish.jpg"></video>
+
+    <!-- disablepictureinpicture value is false 
+    disableremoteplayback to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.)
+    -->
+
+    <video src="/video/Wildlife.mp4" controls width="500" height="200" disablepictureinpicture disableremoteplayback
+        preload="auto"></video>
+
+
+    <!-- single sources example-->
+    <video src="/video/Wildlife.mp4" width="200" height="200" controls>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur.
+        </p>
+        <a href="#">Links</a>
+    </video>
+
+    <!-- Multiple sources example -->
+    <video controls width="400" height="400">
+        <source src="/video/Wildlife.mp4" type="video/mp4" />
+        <source src="/video/Wildlife.mkv" type="video/mkv" />
+        <source src="/video/Wildlife.webm" type="video/webm" />
+        <source src="/video/Wildlife.wmv" type="video/wmv" />
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            <a href="#">links</a>
+        </p>
+    </video>
+
+
+    <!-- <source> element
+    same media content in multiple file formats -->
+    <video controls width="400" height="400">
+        <source src="/video/Wildlife.mp4" type="video/mp4" />
+        <source src="/video/Wildlife.mkv" type="video/mkv" />
+        <source src="/video/Wildlife.webm" type="video/webm" />
+        <source src="/video/Wildlife.wmv" type="video/wmv" />
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            <a href="#">links</a>
+        </p>
+    </video><br><br>
+
+
+    <!-- <track> element ->  The Embed Text Track element 
+    The tracks are formatted in WebVTT format ( .vtt files) — Web Video Text Tracks. -->
+
+    <!--
+    <video controls poster="/images/sample.gif">
+        <source src="sample.mp4" type="video/mp4">
+        <source src="sample.ogv" type="video/ogv">
+        <track kind="captions" src="sampleCaptions.vtt" srclang="en">
+        <track kind="descriptions" src="sampleDescriptions.vtt" srclang="en">
+        <track kind="chapters" src="sampleChapters.vtt" srclang="en">
+        <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de">
+        <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en">
+        <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja">
+        <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz">
+        <track kind="metadata" src="keyStage1.vtt" srclang="en"label="Key Stage 1">
+        <track kind="metadata" src="keyStage2.vtt" srclang="en"label="Key Stage 2">
+        <track kind="metadata" src="keyStage3.vtt" srclang="en"label="Key Stage 3">
+         Fallback 
+        ...
+    </video>
+    -->
+
+    <video src="/video/Bre_Petrunko_(Bulgarian_Trap)(360p).mp4" controls poster="/school.jpg" width="1000" height="1000"
+        loop id="video">
+        <track default kind="subtitles" src="/Bre-Petrunko-(Bulgarian-Trap)(360p)[1].vtt" scrlang="en" label="english">
+    </video>
+
+    <!-- <video src="/video/Bre_Petrunko_(Bulgarian_Trap)(360p).mp4" controls poster="/school.jpg" 
+        width="1000" height="1000" loop>
+        <track default kind="metadata" src="Bre-Petrunko-(Bulgarian-Trap)(360p)[1].vtt" srclang="en" label="Key Stage 1">
+        <track default kind="metadata" src="Bre-Petrunko-(Bulgarian-Trap)(360p)[1].vtt" srclang="en" label="Key Stage 2">
+        <track default kind="metadata" src="Bre-Petrunko-(Bulgarian-Trap)(360p)[1].vtt" srclang="en" label="Key Stage 3">
+    </video> -->
+
+
+    <!-- Audio content use <audio> element 
+        attribute  autoplay , controls , loops , muted , src
+    muted -> sound off-->
+
+    <figure>
+        <figcaption>Listen to the Audio</figcaption>
+        <audio src="/audio/Kalimba.mp3" controls loop>
+            Your browser does not support the
+            <code>audio</code> element
+        </audio>
+    </figure>
+
+    <!-- with source -->
+    <figure>
+        <figcaption>Listen to the Audio</figcaption>
+        <audio controls loop>
+            <source src="/audio/Kalimba.mp3" type="audio/mp3">
+            <source src="/audio/Kalimba.ogg" type="audio/ogg">
+            Your browser does not support the
+            <code>audio</code> element
+        </audio>
+    </figure>
+    <!-- https://blog.shahednasser.com/how-to-style-an-audio-element/#style-the-timeline  learn-->
+ 
+
+</body>
+
+
+</html>
