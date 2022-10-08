@@ -12,6 +12,25 @@
     <script src="index.js"></script>
     <!-- <title>Active learning</title> -->
     <title>Document and website structure</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 2px solid black;
+            font-size: 1.8rem;
+        }
+
+        th,
+        td {
+            border: 2px solid rgb(201, 190, 190);
+            padding: 10px 20px;
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -286,6 +305,190 @@
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat cupiditate distinctio quo?</p>
     </div>
 
+
+
+    <!-- 6.  Active learning example -->
+    <!-- table -->
+    <table>
+        <caption>School Time Table</caption>
+
+        <colgroup>
+            <col>
+            <col>
+            <col style="background-color: rgb(159, 228, 159);">
+            <col>
+            <col style="background-color: rgb(159, 228, 159);">
+            <col style="border: 4px solid rgb(236, 97, 120); background-color: antiquewhite;">
+            <col>
+        </colgroup>
+        <tr>
+            <th>Period</th>
+            <th>Mon</th>
+            <th>Tues</th>
+            <th>Wed</th>
+            <th>Thurs</th>
+            <th>Fri</th>
+            <th>Sat</th>
+            <th>Sun</th>
+        </tr>
+        <tr>
+            <th>1st period</th>
+            <td>Englist</td>
+            <td>- -</td>
+            <td>- -</td>
+            <td>German</td>
+            <td>Dutch</td>
+            <td>- -</td>
+            <td>- -</td>
+        </tr>
+        <tr>
+            <th>2nd period</th>
+            <td>English</td>
+            <td>English</td>
+            <td>- -</td>
+            <td>German</td>
+            <td>Dutch</td>
+            <td>- -</td>
+            <td>- -</td>
+        </tr>
+        <tr>
+            <th>3rd period</th>
+            <td>- -</td>
+            <td>German</td>
+            <td>- -</td>
+            <td>German</td>
+            <td>Dutch</td>
+            <td>- -</td>
+            <td>- -</td>
+        </tr>
+        <tr>
+            <th>4th period</th>
+            <td>- -</td>
+            <td>English</td>
+            <td>- -</td>
+            <td>German</td>
+            <td>English</td>
+            <td>- -</td>
+            <td>- -</td>
+        </tr>
+    </table>
+
+    <br><br>
+    <!-- 7.  Active learning example -->
+    <!-- How I chose to spend my money -->
+
+    <table>
+        <caption>How I chose to spend my money</caption>
+        <thead style="background-color: rgb(221, 101, 101);">
+            <tr>
+                <th>Purchase</th>
+                <th>Location</th>
+                <th>Date</th>
+                <th>Evaluation</th>
+                <th>Cost$</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="4">SUM</td>
+                <td>118</td>
+            </tr>
+        </tfoot>>
+        <tbody>
+            <tr>
+                <td>Haircut</td>
+                <td>Haidresser</td>
+                <td>12/09</td>
+                <td>Great idea</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Lesagne</td>
+                <td>Restaurent</td>
+                <td>12/09</td>
+                <td>Regrets</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>Shoes</td>
+                <td>Shoeshop</td>
+                <td>13/09</td>
+                <td>Big regrets</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <td>Toothpaste</td>
+                <td>Supermarket</td>
+                <td>13/09</td>
+                <td>Good</td>
+                <td>5</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <!-- 8.  Active learning example -->
+    <!-- Tables for visually impaired users -->
+
+    <table>
+        <caption>Items Sold Auguest 2016</caption>
+        <tr>
+            <th colspan="2"></th>
+            <th colspan="3">Clothes</th>
+            <th colspan="2">Accessories</th>
+        </tr>
+        <tr>
+            <th colspan="2"></th>
+            <th>Trousers</th>
+            <th>Skirts</th>
+            <th>Dresses</th>
+            <th>Bracelets</th>
+            <th>Rings</th>
+        </tr>
+        <tr>
+            <th rowspan="3">Belgium</th>
+            <th>Antwerp</th>
+            <td>56</td>
+            <td>22</td>
+            <td>43</td>
+            <td>72</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <th>Gent</th>
+            <td>46</td>
+            <td>18</td>
+            <td>50</td>
+            <td>61</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <th>Brusseis</th>
+            <td>51</td>
+            <td>27</td>
+            <td>38</td>
+            <td>69</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <th rowspan="2">The Netheriands</th>
+            <th>Amsterdam</th>
+            <td>89</td>
+            <td>34</td>
+            <td>69</td>
+            <td>85</td>
+            <td>38</td>
+        </tr>
+        <tr>
+            <th>Utrecht</th>
+            <td>80</td>
+            <td>12</td>
+            <td>43</td>
+            <td>36</td>
+            <td>19</td>
+        </tr>
+    </table>
 </body>
 
 </html>
