@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="80">
+    <style>
+        input:checked+label {
+            color: red;
+        }
+
+        ::placeholder {
+            color: gray;
+        }
+    </style>
+
+    <title>HTML form</title>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">HTML form</h1>
+
+    <!-- form element -> all form start with form element
+    attribute  ->  action="URL" , method="POST" , target="_blank"
+    -->
+
+    <form action="#" method="post" target="_blank">
+        <!-- input element -->
+    </form>
+
+    <!-- Form which will send a GET request to the current URL -->
+    <form method="get">
+        <label>Name:
+            <input name="submitted-name" autocomplete="name">
+        </label>
+        <button>Save</button>
+    </form>
+
+    <br>
+    <!-- Form which will send a POST request to the current URL -->
+    <form method="post">
+        <label>Name:
+            <input name="submitted-name" autocomplete="name">
+        </label>
+        <button>Save</button>
+    </form>
+
+    <br>
+    <!-- Form with fieldset, legend, and label-->
+    <form method="post">
+        <fieldset>
+            <legend>Title</legend>
+            <label><input type="radio" name="radio"> Select me</label>
+        </fieldset>
+    </form>
+    <br><br>
+
+
+
+    <form
+        action="https://script.google.com/macros/s/AKfycbzjgMv1eg-gDu1-D8yE_izj5otaXB_xDQXk3ImoVDwQCnFaVUiBjXxXv-21v79hwU46qQ/exec"
+        method="post">
+
+        <input type="text" name="name" placeholder="Name"><br><br>
+        <input type="email" name="email" placeholder="Email"><br><br>
+        <input type="tel" name="phone" placeholder="Phone"><br><br>
+        <input type="submit">
+        <input type="reset" value="reset">
+    </form>
+    <br>
+
+
+    <!-- input element  ->  create interactive controls for web-based forms in order to
+    accept data from the user -->
+
+    <!-- attribute -> accept, alt, autocomplete, capture, checked, max, maxlength, min, minlength, multiple, name, 
+    patten, placeholder, readonly, requried, size, step, type, value -->
+
+    <form action="">
+        <input type="text" placeholder="Enter your name" required minlength="5" maxlength="12" name="name">
+    </form>
+    <br>
+
+    <!-- There are CSS selectors that can specification target form controls based on their UI features, -->
+    <!-- UI pseudo-classes   ->   :enabled, :disabled, :read-only, :read-write, :placeholder-shown, :default, :checked,
+    :indeterminate, :valid, :invalid , :in-range, out-of-range, :required , :optional, :blank, :user-invalid-->
+
+    <form action="">
+
+        <input type="checkbox" name="HP" id="HP">
+        <label for="checked">Age</label>
+
+        <input type="checkbox" name="HP" id="HP">
+        <label for="checked">Age1</label>
+
+        <input type="checkbox" name="HP" id="HP" checked>
+        <label for="checked">Age2</label>
+
+        <input type="checkbox" name="HP" id="HP">
+        <label for="checked">Age3</label>
+    </form>
+
+    <!-- ::placeholder pseudo element -->
+    <input type="text" name="name" id="name" placeholder="Enter your name">
+    <br>
+    <br>
+
+
+    <!-- texarea element  -> represents a multi-line plain-text editing control
+    attributes  -> col, row and input all attribute use -->
+    <textarea name="story" id="story" cols="30" rows="10">It was a dark and stormy night....</textarea>
+
+    <!-- using "minlength" and "maxlength" -->
+    <textarea name="story" id="story" cols="30" rows="10" minlength="5"
+        maxlength="15">Write Something here...</textarea>
+
+    <!-- using "placeholder"   -->
+    <textarea name="story" id="story" cols="30" rows="10" placeholder="Comment her"></textarea>
+
+    <!-- Disabled and readonly -->
+    <textarea name="textarea" rows="5" cols="30" disabled>Iamadisabled textarea</textarea>
+    <textarea name="textarea" rows="5" cols="30" readonly>Iama readonlytextarea</textarea>
+
+    
+
+</body>
+
+</html>
