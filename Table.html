@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="80">
+    <title>Tables</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 2px solid black;
+            font-size: 1.8rem;
+        }
+
+        th,
+        td {
+            border: 2px solid rgb(201, 190, 190);
+            padding: 10px 20px;
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Table in HTML</h1>
+
+    <!-- Every table use table element
+    td element -> table data
+    tr element -> table row -->
+
+    <table border="1">
+        <!-- table data 3 time insert -->
+        <td>Hi, I'm your first cell</td>
+        <td>Hi, I'm your second cell</td>
+        <td>Hi, I'm your third cell</td>
+        <td>Hi, I'm your fourth cell</td>
+    </table>
+
+    <br><br>
+
+    <!-- table row -->
+    <table border="2">
+        <tr>
+            <td>Hi, I'm your first cell</td>
+            <td>Hi, I'm your second cell</td>
+            <td>Hi, I'm your third cell</td>
+            <td>Hi, I'm your fourth cell</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <!-- Adding headers with <th> elements -->
+
+    <!-- row header -->
+    <table border="2">
+        <tr>
+            <th>Person</th>
+            <td>Knocky</td>
+            <td>Flor</td>
+            <td>Ella</td>
+        </tr>
+        <tr>
+            <th>Breed</th>
+            <td>Jack Russell</td>
+            <td>Poodle</td>
+            <td>Streetdog</td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td>16</td>
+            <td>10</td>
+            <td>5</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+
+    <!-- coloum header -->
+    <table border="1">
+        <tr>
+            <th>S.N.</th>
+            <th>Name</th>
+            <th>Roll number</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Chandan thakur</td>
+            <td>1453468</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Tilak kumar</td>
+            <td>1456876</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Meenu kumari</td>
+            <td>1456898</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <!-- colspan in table -->
+    <table border="1">
+        <tr>
+            <th>S.N.</th>
+            <th>Name</th>
+            <th>Roll number</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Chandan thakur</td>
+            <td>1453468</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td colspan="2" style="background-color: red;">Tilak kumar</td>
+
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Meenu kumari</td>
+            <td>1456898</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="background-color: red;">4</td>
+            <td>1456898</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td colspan="2" style="background-color: red;">Meenu kumari</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <!-- rowspan in table -->
+    <table border="2">
+        <tr>
+            <td>Person</td>
+            <td>Knocky</td>
+            <td>Flor</td>
+            <td rowspan="4" style="background-color: red;">Ella</td>
+        </tr>
+        <tr>
+            <td>Breed</td>
+            <td rowspan="2" style="background-color: red;">Jack Russell</td>
+            <td>Poodle</td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>Person</td>
+            <td>Knocky</td>
+            <td>Flor</td>
+        </tr>
+    </table>
+
+
+    <!-- <col> and <colgroup> elements. -->
+
+    <!-- style add first column -->
+    <table>
+        <colgroup>
+            <col style="background-color: yellow">
+        </colgroup>
+        <tr>
+            <th>Data 1</th>
+            <th>Data 2</th>
+            <th>Data 3</th>
+        </tr>
+        <tr>
+            <td>Calcutta</td>
+            <td>Orange</td>
+            <td>Orange</td>
+        </tr>
+        <tr>
+            <td>Robots</td>
+            <td>Jazz</td>
+            <td>Orange</td>
+        </tr>
+    </table>
+
+
+    <!-- style add second column -->
+    <table>
+        <colgroup>
+            <col>
+            <col style="background-color: yellow">
+        </colgroup>
+        <tr>
+            <th>Data 1</th>
+            <th>Data 2</th>
+            <th>Data 3</th>
+        </tr>
+        <tr>
+            <td>Calcutta</td>
+            <td>Orange</td>
+            <td>Orange</td>
+        </tr>
+        <tr>
+            <td>Robots</td>
+            <td>Jazz</td>
+            <td>Orange</td>
+        </tr>
+    </table>
+
+
+    <!-- style add thrid column -->
+    <table>
+        <colgroup>
+            <col>
+            <col>
+            <col style="background-color: yellow">
+        </colgroup>
+        <tr>
+            <th>Data 1</th>
+            <th>Data 2</th>
+            <th>Data 3</th>
+        </tr>
+        <tr>
+            <td>Calcutta</td>
+            <td>Orange</td>
+            <td>Orange</td>
+        </tr>
+        <tr>
+            <td>Robots</td>
+            <td>Jazz</td>
+            <td>Orange</td>
+        </tr>
+    </table>
+
+    <!-- style add column for 2 .. 3 .. 4 .. 5 -->
+    <table>
+        <colgroup>
+            <col style="background-color: yellow" span="2">
+        </colgroup>
+        <tr>
+            <th>Data 1</th>
+            <th>Data 2</th>
+            <th>Data 3</th>
+        </tr>
+        <tr>
+            <td>Calcutta</td>
+            <td>Orange</td>
+            <td>Orange</td>
+        </tr>
+        <tr>
+            <td>Robots</td>
+            <td>Jazz</td>
+            <td>Orange</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <!-- Adding a caption to your table with <caption> -->
+    <table>
+        <caption>Jurassic period</caption>
+        <tr>
+            <th>Data 1</th>
+            <th>Data 2</th>
+            <th>Data 3</th>
+        </tr>
+        <tr>
+            <td>Calcutta</td>
+            <td>Orange</td>
+            <td>Orange</td>
+        </tr>
+        <tr>
+            <td>Robots</td>
+            <td>Jazz</td>
+            <td>Orange</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <!-- Adding structure with <thead>, <tfoot>, and <tbody> -->
+    <table>
+        <colgroup>
+            <col style="background-color: rgb(118, 230, 137);" span="2">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">Data 1</th>
+                <th scope="col">Data 2</th>
+                <th scope="col">Data 3</th>
+                <th scope="col">Data 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">Robots</td>
+                <td>Jazz</td>
+                <td>Orange</td>
+                <td>Calcutta</td>
+            </tr>
+            <tr>
+                <td>Robots</td>
+                <td>Jazz</td>
+                <td>Orange</td>
+                <td>Calcutta</td>
+            </tr>
+            <tr>
+                <td>Robots</td>
+                <td>Jazz</td>
+                <td>Orange</td>
+                <td>Calcutta</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Robots</td>
+                <td>Jazz</td>
+                <td>Orange</td>
+                <td>Calcutta</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+    <!-- Nesting Tables -->
+    <table>
+        <caption>Nesting tables</caption>
+
+        <tr>
+            <th id="th-element">Title 1</th>
+            <th>Title 2</th>
+            <th>Title 3</th>
+        </tr>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td headers="cell1">Cell 1</td>
+                        <td headers="cell2">Cell 2</td>
+                        <td headers="cell3">VCell 3</td>
+                    </tr>
+                </table>
+            </td>
+            <td>Cell 2</td>
+            <td>Cell 3</td>
+        </tr>
+        <tr>
+            <td>Cell 4</td>
+            <td>Cell 5</td>
+            <td>Cell 6</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+
+    <!-- Table element ->  Information data  two dimenional table
+    row , coloumn and cell
+    attribute ->  align, bgcolor, border, width
+    -->
+    <table align="center" bgcolor="pink">
+        <tr>
+            <th>Person</th>
+            <td>Knocky</td>
+            <td>Flor</td>
+            <td>Ella</td>
+        </tr>
+        <tr>
+            <th>Breed</th>
+            <td>Jack Russell</td>
+            <td>Poodle</td>
+            <td>Streetdog</td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td>16</td>
+            <td>10</td>
+            <td>5</td>
+        </tr>
+    </table>
+
+        <br><br>
+
+
+    <!-- 
+        <thead>   ->   The table head elemnent
+        <tbody>   ->   The table body element
+        <tfoot>   ->   The table foot element
+        <tr>      ->   The table row element
+        <th>      ->   The table header element
+        <td>      ->   The table data element
+     -->
+
+
+    <table align="right">
+        <caption align="bottom">School Student Data</caption>
+
+        <colgroup>
+        <col>
+        <col style="background-color: antiquewhite;">
+    </colgroup>
+        <thead bgcolor="black">
+            <tr style="color: white;">
+                <th>Roll no.</th>
+                <th>First name</th>
+                <th>Subject</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>127834</td>
+                <td>Chandan thakur</td>
+                <td>Math</td>
+            </tr>
+            <tr>
+                <td>237645</td>
+                <td>Tilak kumar</td>
+                <td>English</td>
+            </tr>
+        </tbody>
+        <!-- Multiple bodies -->
+        <tbody bgcolor="red">
+            <tr>
+                <td>874536</td>
+                <td>Meenu kumari</td>
+                <td>Hindi</td>
+            </tr>
+            <tr>
+                <td>348998</td>
+                <td>Monika kumari</td>
+                <td>History</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>456545</td>
+                <td>Ram thakur</td>
+                <td>SST</td>
+            </tr>
+            <tr>
+                <td>565678</td>
+                <td>Ravi gupta</td>
+                <td>Com.</td>
+            </tr>
+        </tbody>
+        <tfoot bgcolor="green">
+            <tr>
+                <td colspan="3">Student record</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+</body>
+
+</html>
