@@ -18,6 +18,10 @@
         legend {
             bottom: 0px;
         }
+
+        input[type="text"] {
+            width: 300px;
+        }
     </style>
 
     <title>HTML form</title>
@@ -25,8 +29,8 @@
 
 <body>
 
-    <h1 style="text-align: center;">HTML form</h1>
 
+    <h4 style="text-align: center;">form element</h4>
     <!-- form element -> all form start with form element
     attribute  ->  action="URL" , method="POST" , target="_blank"
     -->
@@ -77,6 +81,9 @@
     <br>
 
 
+
+
+    <h4 style="text-align: center;">input element</h4>
     <!-- input element  ->  create interactive controls for web-based forms in order to
     accept data from the user -->
 
@@ -113,6 +120,10 @@
     <br>
 
 
+
+
+
+    <h4 style="text-align: center;">texarea element</h4>
     <!-- texarea element  -> represents a multi-line plain-text editing control
     attributes  -> col, row and input all attribute use -->
     <textarea name="story" id="story" cols="30" rows="10">It was a dark and stormy night....</textarea>
@@ -156,6 +167,10 @@
     </form>
 
 
+
+
+
+    <h4 style="text-align: center;">fieldset element</h4>
     <!-- fieldset element -> is used to group several controls as well as labels( <label>)
     within a web form.  -->
 
@@ -187,18 +202,595 @@
 
     <!-- would be better done like this: -->
     <div>
-    <label for="username">
-        <span>Name:</span>
-        <input id="username" type="text" name="username">
-        <span aria-label="required">*</span>
-    </label>
-    </div-->
-    <br><br>
-    <!-- But this is probably best: -->
-    <div>
-        <label for="username">Name: <span aria-label="required"> <abbr title="Enter your vaild name">*</abbr></span></label>
-        <input id="username" type="text" name="username" />
-    </div>
+        <label for="username">
+            <span>Name:</span>
+            <input id="username" type="text" name="username">
+            <span aria-label="required">*</span>
+        </label>
+        </div-->
+        <br><br>
+        <!-- But this is probably best: -->
+        <div>
+            <label for="username">Name: <span aria-label="required"> <abbr
+                        title="Enter your vaild name">*</abbr></span></label>
+            <input id="username" type="text" name="username" />
+        </div>
+        <br><br>
+
+
+
+
+
+        <h4 style="text-align: center;"> text input feilds </h4>
+        <!--  type text create basic single-line text fields. -->
+
+        <input type="text" name="name" id="text-feilds" required minlength="5" maxlength="15" size="10">
+        <br><br>
+
+        <!-- Basic example -->
+        <form>
+            <div>
+                <label for="User name">Choose your username</label>
+                <input type="text" name="name" id="firstname" placeholder="Lower case, all oneword" size="20" required
+                    minlength="3" maxlength="17" pattern="[a-z]{4,8}" title="Enter your user name">
+            </div>
+            <div>
+                <!-- <button type="submit" onclick="getdata()">Sumbit</button> -->
+                <!--function call kareke -->
+                <!-- <button type="submit" id="btn">Submit</button>  -->
+                <!-- addEventListener se-->
+            </div>
+        </form>
+
+        <script>
+            //form input data asscess in javascrit
+            // 1. first method
+            // function getdata(){    
+            //     var data = document.getElementById("firstname").value;
+            //     alert(data);
+            //     // console.log(data);
+            // }
+
+
+            // 2. method addEventListener se
+            const btn = document.getElementById("btn");
+
+            btn.addEventListener("click", function data() {
+                const data1 = document.getElementById("firstname").value;
+                alert(data1);
+            })
+        </script>
+
+
+
+
+
+
+
+        <h4 style="text-align: center;"> password input feilds </h4>
+        <!-- type password provide a way for the user to securely enter apassword. -->
+
+        <label for="pass">Password(8 charcter minimum): </label>
+        <input type="password" name="password" id="pass" minlength="8" required>
+        <br><br>
+
+
+        <!-- autocomplete attribute value -> on, off, current-password, new-password etc... -->
+        <form>
+            <div>
+                <label for="username">UserName:</label>
+                <input type="text" name="username" id="username" minlength="12" required autocomplete="new-password">
+            </div>
+            <br>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" minlength="8" required autocomplete="new-password">
+            </div>
+            <div>
+                <button>Submit</button>
+            </div>
+        </form>
+
+        <!-- autocomplete attribute -->
+        <form>
+            <h1>Using the browser's auto-fill features</h1>
+            <fieldset>
+                <legend>Basic Personal information autofill</legend><br>
+                <div>
+                    <label for="name">Full Name: <input type="text" name="name" id="name" size="10"
+                            autocomplete="name"></label>
+                </div><br>
+                <div>
+                    <label for="email">Email: <input type="email" name="email" id="email" size="35"
+                            autocomplete="email"></label>
+                </div><br>
+                <div>
+                    <label for="Phone">Phone: <input type="phone" name="phone" id="number" size="10"
+                            autocomplete="phone"></label>
+                </div><br>
+                <div>
+                    <label for="address">Address: <input type="text" name="address" id="address" size="40"
+                            autocomplete="street-address"></label>
+                </div>
+            </fieldset><br>
+            <fieldset>
+                <legend>Detailed information autofill </legend><br>
+                <div>
+                    <label for="firstname">First: <input type="text" name="firstname" id="fname"> </label>
+                    <label for="middlename">Middle: <input type="text" name="middlename" id="mname"> </label>
+                    <label for="lastname">Last: <input type="text" name="lastname" id="lnmae"> </label>
+                </div><br>
+                <div>
+                    <label for="adderss1">Address 1: <input type="text" name="adderss1" id="adderss1"> </label>
+                </div><br>
+                <div>
+                    <label for="adderss2">Address 2: <input type="text" name="adderss2" id="adderss2"> </label>
+                </div><br>
+                <div>
+                    <label for="city">City: <input type="text" name="city" id="city"> </label>
+                    <label for="state">State: <input type="text" name="state" id="state"> </label>
+                    <label for="postcode">Post code: <input type="number" name="postcode" id="postcode"> </label>
+                </div>
+            </fieldset><br>
+            <fieldset>
+                <legend>Password fields</legend><br>
+                <div><label for="password">Enter your current password: <input type="text" name="password"
+                            id="password"></label></div><br>
+                <div><label for="newpassword">Create a new password: <input type="text" name="newpassword"
+                            id="newpassword"></label></div><br>
+                <div><label for="comfirmpassword">Confirm the new password: <input type="text" name="comfirmpassword"
+                            id="comfirmpassword"></label></div>
+            </fieldset><br>
+
+            <button type="sumbit">Sumbit</button>
+            <button type="reset">Reset</button>
+        </form>
+
+
+
+
+
+
+        <h4 style="text-align: center;"> hidden input feilds </h4>
+        <!-- <input> elements of type hidden let web developers include data that cannot be seen or modified by users when a
+        form is submitted. For example, the ID of the content that is currently being ordered or edited, or a unique security token.  -->
+
+        <form>
+            <label for="name">Name: <input type="text" name="name"></label>
+            <input type="hidden" name="postId" id="postId" value="34256">
+
+            <button type="submit">Submit</button>
+        </form><br><br>
+
+        <form>
+            <div>
+                <label for="title">Post title:</label>
+            </div>
+            <div>
+                <input type="text" name="titlt" id="tilte" value="My excellent blog post">
+            </div><br>
+            <div>
+                <label for="content">Post content:</label>
+            </div>
+            <div>
+                <textarea name="content" id="contentcols=" 60" rows="5">
+                    This is the content of my excellent blog post. I hope you enjoy it!
+                </textarea>
+            </div><br>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+            <input type="hidden" name="postID" id="postId" value="707325">
+        </form>
+
+
+        <h4 style="text-align: center;">text input field </h4>
+        <!-- type text create basic, single-line inputs.  -->
+
+        <form>
+            <div>
+                <label for="uname">Choose a username: <input type="text" id="uname" name="uname" required size="10"
+                        minlength="3" maxlength="8" pattern="[a-z]{4-8}" placeholder="Enter username"></label>
+            </div>
+            <div>
+                <button>Submit</button>
+            </div>
+        </form>
+
+
+
+
+
+        <h4 style="text-align: center;">email input field</h4>
+        <!-- type email are used to let the user enter and edit an e-mail address, 
+        or, if the multiple attribute is specified, a list of e-mail addresses.
+        all same attribute but multiple learn-->
+
+        <input type="email" name="email" id="email-address">
+
+        <h4>Example</h4>
+        <form>
+
+            <input type="email" id="email-address" list="email-list" size="30" minlength="4" maxlength="25"
+                placeholder="sophie@example.com" required>
+
+        </form>
+
+
+        <h4>multiple attribute</h4>
+        <!-- multiple Boolean attribute, the input can be configured to accept multiple e-mail addresses. -->
+        <!-- e-mail addresses separated by commas and, optionally, some number of whitespace characters are present. -->
+        <form>
+            <input type="email" id="email-address" multiple>
+            <!-- 
+                Some examples of valid strings when multiple is specified:
+                ""
+                "me@example"
+                "me@example.org"
+                "me@example.org,you@example.org"
+                "me@example.org, you@example.org"
+                "me@example.org,you@example.org, us@example.org"
+             -->
+        </form>
+
+
+        <h4>pattern attribute </h4>
+        <form>
+            <input type="email" id="email-address" size="30" minlength="4" maxlength="25"
+                pattern=".+@beststartupever\.com" required>
+        </form>
+
+        <h4>Providing a single default using the value attribute</h4>
+        <!-- As always, you can provide a default value for an email input box by setting its value -->
+        <form>
+            <input type="email" name="email" id="email-address" value="default@example.com">
+        </form>
+
+        <h4>Offering suggested values</h4>
+        <form>
+            <input type="email" id="email-address" list="email-list" size="30" minlength="4" maxlength="25"
+                placeholder="sophie@example.com" required>
+
+            <datalist id="email-list">
+                <option value="jbond007@mi6.defence.gov.uk"></option>
+                <option value="jbourne@unknown.net"></option>
+                <option value="nfury@shield.org"></option>
+                <option value="tony@starkindustries.com"></option>
+                <option value="hulk@grrrrrrrr.arg"></option>
+            </datalist>
+        </form>
+
+
+        <h4>Proper example</h4>
+        <form>
+            <div>
+                <label for="address">Your e-mail address:</label><br>
+                <input type="email" id="email-address" size="30" minlength="4" maxlength="2" required
+                    placeholder="username@beststartupever.com" pattern=".+@beststartupever\.com"
+                    title="Please provide only a Best Startup Ever corporate e-mail address">
+            </div><br>
+            <div>
+                <label for="request">Request:</label><br>
+                <textarea name="message" id="message" cols="30" rows="10"
+                    placeholder="My shoes are too tight, and I have forgotten how to dance." required></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Send Request">
+            </div>
+        </form>
+
+
+
+
+
+
+        <h4 style="text-align: center;">Number form field</h4>
+        <!-- type number are used to let the user enter a number. 
+        They include built-in validation to reject non-numerical entries. -->
+
+        <label for="number">Number of tentacles (10-100):</label>
+        <input type="number" name="tentacles" id="tentacles" min="10" max="1000" value="10"
+            placeholder="Multiple by 10"><br><br>
+
+        <!-- Events: change and input
+         attribute same all atrribute some change
+        minlegth -> min
+        maxlength -> max
+        step attribute , inputmode attribute -->
+
+        <h3>inputmode attribute </h3>
+        <input type="text" name="number" id="number" inputmode="numeric" pattern="/d*">
+
+        <h3>A simple number input</h3>
+        <label for="tickets">Number of tickets you would like to buy:</label>
+        <input type="number" name="ticket" id="ticket" value="0">
+
+        <h3>Controlling step size</h3>
+        <!-- using step attribute -->
+        <input type="number" placeholder="Multiple by 5" step="5">
+
+
+        <h3>Specifying minimum and maximum values</h3>
+        <input type="number" placeholder="Multiple by 5" step="5" min="0" max="100">
+
+
+        <h3>Allowing decimal values</h3>
+        <!-- If you want to enter a value that requires decimals, you'll need to reflect this in the step value (e.g. step="0.01" to allow decimals to two decimal places -->
+        <input type="number" placeholder="1.0" step="0.01" min="0" max="10">
+
+
+        <h3>Offering suggested values</h3>
+        <input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers" />
+
+        <datalist id="defaultNumbers">
+            <option value="10045678"></option>
+            <option value="103421"></option>
+            <option value="11111111"></option>
+            <option value="12345678"></option>
+            <option value="12999922"></option>
+        </datalist>
+
+        <form>
+            <div class="metersarea">
+                <label for="meter">Enter tour height - meters:</label>
+                <input type="number" name="meter" id="meter" placeholder="e.g.  1.78" mix="0" step="0.01">
+                <span class="validity"></span>
+            </div>
+            <div class="inchesarea" style="display: none;">
+                <span>Enter your height - </span>
+
+                <!-- feet -->
+                <label for="feets">feet:</label>
+                <input type="number" name="feet" id="feet" mix="0" step="1">
+                <span class="validity"></span>
+
+                <!-- inches -->
+                <label for="inches">inches:</label>
+                <input type="number" name="inches" id="inches" mix="0" step="0.01" max="11">
+                <span class="validity"></span>
+            </div><br>
+            <div>
+                <input type="button" value="Enter height in feet and inches" class="meters">
+            </div><br>
+            <div>
+                <input type="submit" value="submit">
+            </div>
+        </form>
+
+
+        <script>
+            const metersarea = document.querySelector(".metersarea");
+            const inchesarea = document.querySelector(".inchesarea");
+            const metersinput = document.querySelector("#meter");
+            const feetinput = document.querySelector("#feet");
+            const inchesinput = document.querySelector("#inches");
+            const switchbtn = document.querySelector('input[type="button"]');
+
+
+            switchbtn.addEventListener("click", () => {
+                if (switchbtn.getAttribute("class") === "meters") {
+                    switchbtn.setAttribute("class", "feets");
+                    switchbtn.value = "Enter height in meter";
+
+                    metersarea.style.display = "none";
+                    inchesarea.style.display = "block";
+
+                    feetinput.setAttribute("required", "");
+                    inchesinput.setAttribute("required", "");
+                    metersinput.removeAttribute("required")
+
+                } else {
+                    switchbtn.setAttribute("class", "meters");
+                    switchbtn.value = "Enter height in feet and inches"
+
+                    metersarea.style.display = "block";
+                    inchesarea.style.display = "none";
+                }
+            })
+        </script>
+
+        <h3>example</h3>
+        <form class="vaildition">
+            <div>
+                <label for="balloons">Number of balloons to order (multiples of 10):</label>
+                <input type="number" id="balloons" min="0" max="100" step="10" required>
+                <span></span>
+            </div>
+            <div>
+                <input type="submit" value="submit">
+            </div>
+        </form>
+
+
+
+
+
+        <h4 style="text-align: center;">checkbox input field</h4>
+
+        <!-- type checkbox are rendered by default as boxes that are checked (ticked)
+        when activated, like you might see in an official government paper form.  -->
+
+        <!-- Events	-> change and input 
+        all same attribute but some different attribute
+        checked attribute
+        -->
+
+        <fieldset>
+            <legend>Choose your monster's features:</legend>
+            <input type="checkbox" name="Scales" id="Scales" value="Scales">
+            <label for="Scales">Scales</label><br>
+
+            <input type="checkbox" name="Horns" id="Horns">
+            <label for="Horns">Horns</label><br>
+
+            <input type="submit" value="submit">
+        </fieldset>
+
+        <!-- Checking boxes by default -->
+        <fieldset>
+            <legend>Choose your interests</legend>
+
+            <input type="checkbox" name="coding" id="coding" value="coding" checked>
+            <label for="coding">Coding</label>
+
+            <input type="checkbox" name="music" id="music" value="music">
+            <label for="music">Music</label>
+        </fieldset><br><br>
+
+        <!-- Examples -->
+        <form>
+            <fieldset style="border: 5px solid blue; background-color: aquamarine;">
+                <legend style="background-color:blue; color: white; padding: 10px;">Choose your interests</legend>
+
+                <input type="checkbox" name="coding" id="coding" value="coding">
+                <label for="coding">Coding</label><br><br>
+
+                <input type="checkbox" name="Music" id="Music" value="Music">
+                <label for="Music">Music</label><br><br>
+
+                <input type="checkbox" name="Art" id="Art" value="Art">
+                <label for="Art">Art</label><br><br>
+
+                <input type="checkbox" name="Sports" id="Sports" value="Sports">
+                <label for="Sports">Sports</label><br><br>
+
+                <input type="checkbox" name="Cooking" id="Cooking" value="Cooking">
+                <label for="Cooking">Cooking</label><br><br>
+
+                <div>
+                    <input type="checkbox" name="Other" id="Other" value="Other">
+                    <label for="Other">Other</label>
+
+                    <input type="text" name="othervalue" id="othervalue"><br><br>
+                </div>
+
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </fieldset>
+        </form>
+
+        <script>
+            const other = document.querySelector("#Other");
+            const othervalue = document.querySelector("#othervalue");
+
+            othervalue.style.visibility = "hidden";
+
+            other.addEventListener("change", () => {
+                if (other.checked) {
+                    othervalue.style.visibility = "visible";
+                    othervalue.value = "";
+                } else {
+                    othervalue.style.visibility = "hidden";
+                }
+            })
+        </script>
+
+
+
+
+
+        <h4 style="text-align: center;">Radio input field</h4>
+
+        <!-- type radio are generally used in radio groups—collections of radio buttons describing a set of related options. -->
+        <!-- Events	change and input
+        all same attribute but some different attributes
+        checked attributes -->
+
+        <form>
+            <fieldset>
+                <legend>Please select your preferred contact method:</legend>
+                <div>
+                    <input type="radio" name="contact" id="contactChoice1">
+                    <label for="email">Email</label>
+
+                    <input type="radio" name="contact" id="contactChoice2">
+                    <label for="phone">Phone</label>
+
+                    <input type="radio" name="contact" id="contactChoice3">
+                    <label for="mail">Mail</label>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </fieldset>
+        </form>
+
+
+        <!-- Selecting a radio button by default -->
+        <form>
+            <fieldset>
+                <legend>Please select your preferred contact method:</legend>
+                <div>
+                    <input type="radio" id="contactChoice1" name="contact" value="email" checked />
+                    <label for="contactChoice1">Email</label>
+
+                    <input type="radio" id="contactChoice2" name="contact" value="phone" />
+                    <label for="contactChoice2">Phone</label>
+
+                    <input type="radio" id="contactChoice3" name="contact" value="mail" />
+                    <label for="contactChoice3">Mail</label>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </fieldset>
+        </form>
+
+        <!-- Data representation of a radio group -->
+        <form>
+            <fieldset>
+                <legend>Please select your preferred contact method:</legend>
+                <div>
+                    <input type="radio" name="contact" id="contactChoice1" value="Email">
+                    <label for="contactChoice1">Email</label>
+
+                    <input type="radio" name="contact" id="contactChoice2" value="Phone">
+                    <label for="contactChoice2">Phone</label>
+
+                    <input type="radio" name="contact" id="contactChoice3" value="Mail">
+                    <label for="contactChoice3">Mail</label>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </fieldset>
+        </form>
+        <pre id="log">123</pre>
+
+        <script>
+
+            const form = document.querySelector("form");
+            const log = document.querySelector("#log");
+
+            form.addEventListener("submit", (event) => {
+                event.preventDefault();
+
+                const data = new FormData(form);
+                let output = "";
+                for (const entry of data) {
+                    output = `${output}${entry[0]}=${entry[1]}\r`;
+                }
+
+                log.innerText = output;
+            }, false
+            );
+
+        </script>
+
+        <h4 style="text-align: center;">File inout field</h4>
+        <!-- type="file" let the user choose one or more files from their device storage.  -->
+        <!-- Once chosen, the files can be uploaded to a server using form submission, 
+        or manipulated using JavaScript code and the File API. -->
+
+        <label for="avatar">Choose a profile picture:</label>
+        <input type="file" name="avatar" id="avatar" 
+        accept="image/png, image/jpeg">
+
+        <!-- Events	change and input -->
+        <!-- all same attribute -->
+        <!-- Additional Attributes ->	accept, capture, multiple -->
+
 </body>
 
 </html>
