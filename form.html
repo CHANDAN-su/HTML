@@ -791,6 +791,51 @@
         <!-- all same attribute -->
         <!-- Additional Attributes ->	accept, capture, multiple -->
 
+        <!-- accept attribute
+        The accept attribute value is a string that defines the file types the file input should accept. -->
+
+        <!-- Unique file type specifiers .pdf , .jpg , .png
+        image/* meaning "any audio file"
+        video/* meaning "any audio file"
+        -->
+
+        <input type="file"  id="docpicker"
+        accept=".doc, .docx, .pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        >
+
+        <input type="file"  id="accept-attributes"
+        accept="image/* , video/*  , audio/* , .pdf  , .docx"><br><br>
+
+        <!-- example 1 accept arribute -->
+        <p>
+            <label for="voive">What does your voice sound like? </label>
+            <input type="file" name="voice" id="voice" accept="audio/*"><br><br>
+
+            <label for="video">Upload a video:</label>
+            <input type="file" name="video" id="video" accept="video/*"><br><br>
+
+            <label for="photo">Upload a photo of yourself:</label>
+            <input type="file" name="photo" id="photo" accept="image/*"> <br><br>       
+        </p>
+
+        <!-- capture attribute -->
+       <p>
+        <label for="voice">Select an audio file:</label>
+        <input type="file"  id="voice" capture="user"><br><br>
+
+        <label for="video">Select an video file:</label>
+        <input type="file"  id="video" capture="environment"><br><br>
+
+        <label for="image">Select an images file:</label>
+        <input type="file"  id="image" capture="user">
+       </p> 
+
+       <!-- multiple attribute -->
+       <input type="file" name="avatar" id="avatar" multiple><br><br>
+
+
+
+
 </body>
 
 </html>
