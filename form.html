@@ -778,14 +778,17 @@
 
         </script>
 
+
+
+
+
         <h4 style="text-align: center;">File inout field</h4>
         <!-- type="file" let the user choose one or more files from their device storage.  -->
         <!-- Once chosen, the files can be uploaded to a server using form submission, 
         or manipulated using JavaScript code and the File API. -->
 
         <label for="avatar">Choose a profile picture:</label>
-        <input type="file" name="avatar" id="avatar" 
-        accept="image/png, image/jpeg">
+        <input type="file" name="avatar" id="avatar" accept="image/png, image/jpeg">
 
         <!-- Events	change and input -->
         <!-- all same attribute -->
@@ -799,12 +802,10 @@
         video/* meaning "any audio file"
         -->
 
-        <input type="file"  id="docpicker"
-        accept=".doc, .docx, .pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-        >
+        <input type="file" id="docpicker"
+            accept=".doc, .docx, .pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
 
-        <input type="file"  id="accept-attributes"
-        accept="image/* , video/*  , audio/* , .pdf  , .docx"><br><br>
+        <input type="file" id="accept-attributes" accept="image/* , video/*  , audio/* , .pdf  , .docx"><br><br>
 
         <!-- example 1 accept arribute -->
         <p>
@@ -815,23 +816,333 @@
             <input type="file" name="video" id="video" accept="video/*"><br><br>
 
             <label for="photo">Upload a photo of yourself:</label>
-            <input type="file" name="photo" id="photo" accept="image/*"> <br><br>       
+            <input type="file" name="photo" id="photo" accept="image/*"> <br><br>
         </p>
 
         <!-- capture attribute -->
-       <p>
-        <label for="voice">Select an audio file:</label>
-        <input type="file"  id="voice" capture="user"><br><br>
+        <p>
+            <label for="voice">Select an audio file:</label>
+            <input type="file" id="voice" capture="user"><br><br>
 
-        <label for="video">Select an video file:</label>
-        <input type="file"  id="video" capture="environment"><br><br>
+            <label for="video">Select an video file:</label>
+            <input type="file" id="video" capture="environment"><br><br>
 
-        <label for="image">Select an images file:</label>
-        <input type="file"  id="image" capture="user">
-       </p> 
+            <label for="image">Select an images file:</label>
+            <input type="file" id="image" capture="user">
+        </p>
 
-       <!-- multiple attribute -->
-       <input type="file" name="avatar" id="avatar" multiple><br><br>
+        <!-- multiple attribute -->
+        <input type="file" name="avatar" id="avatar" multiple><br><br>
+
+
+
+
+        <h4 style="text-align: center;">Image input field</h4>
+        <!-- type image are used to create graphical submit buttons, i.e. -->
+
+        <p>Sign in to your account:</p>
+
+        <div>
+            <label for="userid">UserId:</label><br>
+            <input type="text" name="userid" id="userid">
+        </div><br>
+
+        <div>
+            <label for="pwd">Password</label><br>
+            <input type="password" name="pwd" id="pwd">
+        </div><br>
+
+        <input type="image" alt="Login"
+            src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
+            width="100" height="30" style="border-radius: 5px;">
+
+
+
+
+        <h4 style="text-align: center;">button input field</h4>
+        <!-- type button are rendered as simple push buttons, which can be programmed to control custom functionality
+     anywhere on a webpage as required when assigned an event handler function (typically for the click event). -->
+
+        <input type="button" value="Submit"><br><br>
+
+        <!-- Button with a value -->
+        <input type="button" value="Click me"><br><br>
+
+        <!-- Button without a value -->
+        <input type="button"><br><br>
+
+        <form action="#">
+            <input type="button" value="Start machine" class="input" accesskey="c">
+        </form>
+        <p class="pa">The machibe is stopped</p>
+
+        <script>
+            const button = document.querySelector(".input");
+            const paragraph = document.querySelector(".pa");
+
+            button.addEventListener("click", updatebutton);
+
+            function updatebutton() {
+                // console.log("hello world");
+
+                if (button.value === "Start machine") {
+                    button.value = "Stop machine";
+                    paragraph.textContent = "The machine is starting";
+                } else {
+                    button.value = "Start machine";
+                    paragraph.textContent = "The machine is stopped"
+                }
+            }
+
+        </script>
+
+        <!-- Adding keyboard shortcuts to buttons  you use the accesskey global attribute.-->
+        <input type="button" value="Submit" accesskey="s">
+
+
+        <!-- Setting the disabled attribute -->
+        <input type="button" value="Enabled" class="enabled">
+
+        <script>
+            const Enabled = document.querySelector(".enabled");
+
+            Enabled.addEventListener("click", changes);
+
+            function changes() {
+                Enabled.disabled = true;
+                Enabled.value = "Disabled";
+
+                setTimeout(() => {
+                    Enabled.disabled = false;
+                    Enabled.value = "Enabled";
+                }, 2000);
+            }
+        </script>
+
+        <!-- Inheriting the disabled state -->
+        <fieldset class="fieldset">
+            <legend>Button group</legend>
+            <input type="button" value="Button 1" class="inheriting">
+            <input type="button" value="Button 2" class="inheriting1">
+            <input type="button" value="Button 3" class="inheriting2">
+        </fieldset>
+
+        <script>
+            const inputbutton = document.querySelector(".inheriting1");
+            const hidden = document.querySelector(".fieldset");
+
+            inputbutton.addEventListener("click", hiddendata);
+
+
+            function hiddendata() {
+                // console.log("hello world");
+                hidden.disabled = true;
+                console.log("hidden");
+
+                setTimeout(() => {
+                    hidden.disabled = false;
+                    console.log("enabled");
+                }, 2000);
+            }
+        </script>
+
+
+        <h4 style="text-align: center;">submit inout field</h4>
+        <!-- type submit are rendered as buttons. When the click event occurs (typically because the user clicked the button),
+             the user agent attempts to submit the form to the server. -->
+
+        <!-- Setting the value attribute -->
+        <input type="submit" value="Send Request">
+
+        <!-- Omitting the value attribute -->
+        <input type="submit"><br><br>
+
+        <!-- A simple submit button -->
+        <form action="#">
+            <div>
+                <label for="sometext">Let's submit some text</label>
+                <input type="text" name="sometext" id="sometext">
+            </div>
+            <div>
+                <input type="submit" value="Send">
+            </div>
+        </form><br>
+
+        <!-- Adding a keyboard shortcut to a submit button -->
+        <form action="#">
+            <div>
+                <label for="sometext">Let's submit some text</label>
+                <input type="text" name="sometext" id="sometext">
+            </div>
+            <div>
+                <input type="submit" value="Send" accesskey="s">
+            </div>
+        </form><br>
+
+        <!-- Disabling and enabling a submit button -->
+        <input type="submit" value="Send" disabled>
+
+
+
+        <h4 style="text-align: center;">reset input firlds</h4>
+        <!-- type reset are rendered as buttons, with a default click event handler that resets 
+        all inputs in the form to their initial values. -->
+
+        <!-- Setting the value attribute -->
+        <input type="reset" value="Reset the form">
+
+        <!-- Omitting the value attribute -->
+        <input type="reset"><br><br>
+
+        <!-- A simple reset button -->
+        <form action="#">
+            <div>
+                <label for="example">Type in some sample text</label>
+                <input type="text" name="example" id="example">
+            </div>
+            <div>
+                <input type="reset" value="Reset the form">
+            </div>
+        </form>
+
+        <!-- Adding a reset keyboard shortcut -->
+        <form action="#">
+            <div>
+                <label for="example">Type in some sample text</label>
+                <input type="text" name="example" id="example">
+            </div>
+            <div>
+                <input type="reset" value="Reset the form" accesskey="k">
+            </div>
+        </form>
+
+
+        <h4 style="text-align: center;">search input fields</h4>
+        <!-- type search are text fields designed for the user to enter search queries into. 
+        These are functionally identical to text inputs -->
+
+        <!-- Events	change and input -->
+        <!-- Supported Common Attributes	autocomplete, list, maxlength, minlength, pattern, placeholder, required, size. -->
+
+        <form action="#">
+            <label for="site-search">Search the site</label>
+            <input type="search" name="site-search" id="site-search">
+
+            <button>Search</button>
+        </form><br>
+
+        <!-- full example -->
+        <form action="#">
+            <div>
+                <label for="mysearch">Search for product by ID:</label>
+                <input type="search" name="mysearch" id="search" placeholder="Serach your site" minlength="5" max="30"
+                    size="25" required pattern="[a-zA-Z]{2}[0-9]{4}">
+            </div>
+            <div>
+                <input type="button" value="Submot">
+            </div>
+        </form>
+
+
+
+        <h4 style="text-align: center;">url input field</h4>
+        <!-- type url are used to let the user enter and edit a URL. -->
+
+        <!-- Events	change and input -->
+        <!-- Supported Common Attributes	autocomplete, list, maxlength, minlength, pattern, placeholder, readonly, required and size -->
+
+        <!-- A simple URL input -->
+        <input type="url" name="url" id="url"><br><br>
+
+        <!-- Physical input element size -->
+        <input type="url" name="myurl" id="myurl" size="30"><br><br>
+
+        <!-- Element value length -->
+        <input type="url" name="myurl" id="url" minlength="10" maxlength="80" size="30"
+            placeholder="https://example.com"><br><br>
+
+        <!-- Providing a single default using the value attribute -->
+        <input type="url" value="https://example.com"><br><br>
+
+        <!-- Offering suggested values -->
+        <input type="url" name="myurl" id="my-url" list="suggested-url"><br><br>
+
+        <datalist id="suggested-url">
+            <option value="https://developer.mozilla.org/"></option>
+            <option value="http://www.google.com/"></option>
+            <option value="http://www.microsoft.com/"></option>
+            <option value="https://www.mozilla.org/"></option>
+            <option value="http://w3.org/"></option>
+        </datalist>
+
+
+        <!-- Using labels for suggested values -->
+        <input type="url" name="myurl" id="my-url" list="suggested">
+
+        <datalist id="suggested">
+            <option value="https://developer.mozilla.org/" label="MDN"></option>
+            <option value="http://www.google.com/" label="Google"></option>
+            <option value="http://www.microsoft.com/" label="Microsoft"></option>
+            <option value="https://www.mozilla.org/" label="mozilla"></option>
+            <option value="http://w3.org/" label="W3"></option>
+        </datalist>
+
+
+        <form>
+            <div>
+                <label for="myURL">Enter the problem website address:</label>
+                <input id="myURL" name="myURL" type="url" required pattern=".*\.myco\..*"
+                    title="The URL must be in a Myco domain" />
+                <span class="validity"></span>
+            </div>
+            <div>
+                <label for="myComment">What is the problem?</label>
+                <input id="myComment" name="myComment" type="text" required />
+                <span class="validity"></span>
+            </div>
+            <div>
+                <button>Submit</button>
+            </div>
+        </form>
+
+
+
+        
+
+       <h4 style="text-align: center;">color input field</h4> 
+       <!-- type color provide a user interface element that lets a user specify a color, either by using a visual color picker interface or by 
+       entering the color into a text field in #rrggbb hexadecimal format. -->
+
+       <!-- Events	change and input -->
+       <!-- Supported common attributes	autocomplete and list -->
+
+       <p>Choose your monster's colors:</p>
+       <div>
+        <input type="color" name="Head" id="Head" value="#e66465">
+        <label for="Head">Head</label>
+       </div>
+       <div>
+        <input type="color" name="body" id="body" value="#f6b73c">
+        <label for="body">Body</label>
+       </div><br>
+
+       <!-- backgroung color change -->
+       <div>
+        <input type="color" name="background" id="background">
+        <button class="btn">Change</button>
+       </div>
+
+       <script>
+        const backgroungcolor = document.querySelector("#background");
+        const btn1 = document.querySelector(".btn")
+
+        btn1.addEventListener("click" , ()=> {
+         document.body.style.backgroundColor = backgroungcolor.value;
+        })
+       </script>
+
+    
+
 
 
 
