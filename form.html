@@ -245,7 +245,7 @@
         <script>
             //form input data asscess in javascrit
             // 1. first method
-            // function getdata(){    
+            // function getdata(){
             //     var data = document.getElementById("firstname").value;
             //     alert(data);
             //     // console.log(data);
@@ -253,12 +253,12 @@
 
 
             // 2. method addEventListener se
-            const btn = document.getElementById("btn");
+            // const btn = document.getElementById("btn");
 
-            btn.addEventListener("click", function data() {
-                const data1 = document.getElementById("firstname").value;
-                alert(data1);
-            })
+            // btn.addEventListener("click", function data() {
+            //     const data1 = document.getElementById("firstname").value;
+            //     alert(data1);
+            // })
         </script>
 
 
@@ -1107,46 +1107,337 @@
 
 
 
-        
 
-       <h4 style="text-align: center;">color input field</h4> 
-       <!-- type color provide a user interface element that lets a user specify a color, either by using a visual color picker interface or by 
+
+        <h4 style="text-align: center;">color input field</h4>
+        <!-- type color provide a user interface element that lets a user specify a color, either by using a visual color picker interface or by 
        entering the color into a text field in #rrggbb hexadecimal format. -->
 
-       <!-- Events	change and input -->
-       <!-- Supported common attributes	autocomplete and list -->
+        <!-- Events	change and input -->
+        <!-- Supported common attributes	autocomplete and list -->
 
-       <p>Choose your monster's colors:</p>
-       <div>
-        <input type="color" name="Head" id="Head" value="#e66465">
-        <label for="Head">Head</label>
-       </div>
-       <div>
-        <input type="color" name="body" id="body" value="#f6b73c">
-        <label for="body">Body</label>
-       </div><br>
+        <h5></h5>Choose your monster's colors:</h5>
+        <div>
+            <input type="color" name="Head" id="Head" value="#e66465">
+            <label for="Head">Head</label>
+        </div>
+        <div>
+            <input type="color" name="body" id="body" value="#f6b73c">
+            <label for="body">Body</label>
+        </div><br>
 
-       <!-- backgroung color change -->
-       <div>
-        <input type="color" name="background" id="background">
-        <button class="btn">Change</button>
-       </div>
+        <!-- backgroung color change -->
+        <div>
+            <input type="color" name="background" id="background">
+            <button class="btn">Change</button>
+        </div><br>
 
-       <script>
-        const backgroungcolor = document.querySelector("#background");
-        const btn1 = document.querySelector(".btn")
+        <script>
+            const backgroungcolor = document.querySelector("#background");
+            const btn1 = document.querySelector(".btn")
 
-        btn1.addEventListener("click" , ()=> {
-         document.body.style.backgroundColor = backgroungcolor.value;
-        })
-       </script>
-
-    
+            btn1.addEventListener("click", () => {
+                document.body.style.backgroundColor = backgroungcolor.value;
+            })
+        </script>
 
 
+        <!-- Tracking color changes -->
+        <input type="color" name="colorpicker" id="colorpicker">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi laboriosam quaerat illo minus corporis, eos
+            sit asperiores quas, enim ea quos nisi esse veritatis mollitia odio ratione commodi odit labore.</p>
+
+        <script>
+            const colorpicker = document.querySelector("#colorpicker");
+
+            colorpicker.addEventListener("change", watchColorPicker, false);
+
+            function watchColorPicker(e) {
+                document.querySelectorAll("p").forEach((p) => {
+                    p.style.color = e.target.value;
+                })
+            }
+        </script>
+
+
+
+
+        <h4 style="text-align: center;">range input field</h4>
+        <!-- type range let the user specify a numeric value which must be no less than a given value, and no more than another given value. -->
+
+        <!-- Events	change and input -->
+        <!-- Supported common attributes	autocomplete, list, max, min, and step -->
+
+        <p>Audio settings: </p>
+        <input type="range" name="volume" id="volume" min="0" max="11">
+        <label for="volume">Volume</label>
+        <input type="range" name="cowbell" id="cowbell" min="0" max="100" value="90">
+        <label for="cowbell">cowbell</label>
+
+        <!-- Specifying the minimum and maximum -->
+        <input type="range" id="range" min="-10" max="10">
+
+        <!-- Setting step to "any" -->
+        <input type="range" id="range" min="-10" max="10" step="any"><br><br>
+
+        <!-- Adding hash marks -->
+        <label for="temp">Choose a comfortable temperature:</label><br />
+        <input type="range" id="temp" name="temp" list="tickmarks" />
+
+        <datalist id="tickmarks">
+            <option value="0"></option>
+            <option value="25"></option>
+            <option value="50"></option>
+            <option value="75"></option>
+            <option value="100"></option>
+        </datalist>
+
+        <!-- Using the orient attribute -->
+        <input type="range" min="0" max="11" value="7" step="1" orient="vertical">
+
+
+
+
+        <h4 style="text-align: center;">date input field</h4>
+        <!-- type="date" create input fields that let the user enter a date, either with a textbox that validates the input or a special date picker interface. -->
+
+        <!-- Events	change and input -->
+        <!-- Supported common attributes	autocomplete, list, readonly, and step -->
+
+        <label for="starts">Starts date</label>
+        <input type="date" name="date" id="starts" value="2018-07-22">
+
+        <script>
+            const dateoicker = document.querySelector("input[type='date']");
+            dateoicker.value = "2016-09-12"
+
+            console.log(dateoicker.value);  //2016-09-12
+            console.log(dateoicker.valueAsNumber);  //1473638400000
+        </script><br><br>
+
+        <!-- Basic uses of date -->
+        <form>
+            <label for="date">
+                Enter your birthday
+                <input type="date" name="bday">
+            </label>
+            <p><button>Submit</button></p>
+        </form>
+
+        <!-- Setting maximum and minimum dates -->
+        <form>
+            <label>
+                Choose your preferred party date:
+                <input type="date" name="date" id="date" min="2017-03-12" max="2017-03-30" required>
+            </label>
+            <button>Submit</button>
+        </form>
+
+        <!-- pattern attributes  -->
+        <form action>
+            <label>
+                Enter your birthday:
+                <input type="date" id="date" required pattern="/d{4}-/d{2}-/d{2}">
+            </label>
+        </form>
+
+        <form>
+            <div>
+                <label for="bday">Enter your birthday:</label>
+                <input type="date" id="bday" name="bday" />
+            </div>
+
+            <p class="fallbackLabel">Enter your birthday:</p>
+
+            <div>
+                <span>
+                    <label for="day">Day:</label>
+                    <select id="day" name="day"></select>
+                </span>
+                <span>
+                    <label for="month">Month:</label>
+                    <select id="month" name="month">
+                        <option selected>January</option>
+                        <option>February</option>
+                        <option>March</option>
+                        <option>April</option>
+                        <option>May</option>
+                        <option>June</option>
+                        <option>July</option>
+                        <option>August</option>
+                        <option>September</option>
+                        <option>October</option>
+                        <option>November</option>
+                        <option>December</option>
+                    </select>
+                </span>
+                <span>
+                    <label for="year">Year:</label>
+                    <select id="year" name="year"></select>
+                </span>
+            </div>
+        </form>
+
+
+
+
+
+        <h4 style="text-align: center;">datetime input fields</h4>
+        <!-- type datetime-local create input controls that let the user easily enter both a date and a time, 
+        including the year, month, and day as well as the time in hours and minutes. -->
+
+        <!-- Events	change and input -->
+        <!-- Supported common attributes	autocomplete, list, readonly, and step -->
+
+        <label for="meeting-time">Choose a time for your appointment:</label>
+
+        <input type="datetime-local" id="meeting-time" name="meeting-time" value="2018-06-12T19:30"
+            min="2018-06-07T00:00" max="2018-06-14T00:00">
+
+        <form>
+            <label for="party">Enter a date and time for your party booking:</label>
+            <input id="party" type="datetime-local" name="partydate" />
+        </form>
+
+        <form>
+            <div>
+                <label for="party">
+                    Choose your preferred party date and time (required, June 1st 8.30am to
+                    June 30th 4.30pm):
+                </label>
+                <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30"
+                    required />
+            </div>
+            <div>
+                <input type="submit" value="Book party!" />
+            </div>
+        </form>
+
+        <form>
+            <div>
+                <label for="party">
+                    Choose your preferred party date and time (required, June 1st 8.30am to
+                    June 30th 4.30pm):
+                </label>
+                <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30"
+                    pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" required />
+            </div>
+            <div>
+                <input type="submit" value="Book party!" />
+            </div>
+            <input type="hidden" id="timezone" name="timezone" value="-08:00" />
+        </form>
+
+
+
+        <h4 style="text-align: center;">month input fields</h4>
+        <!-- type month create input fields that let the user enter a month and year allowing a month and year to be easily entered. The value is a string whose value is in the format "YYYY-MM", 
+        where YYYY is the four-digit year and MM is the month number. -->
+
+        <!-- Events	change and input -->
+        <!-- Supported common attributes	autocomplete, list, readonly, and step. -->
+
+        <label for="bday-month">What month were you born in?</label>
+        <input type="month" id="bday-month" value="2012-12"><br><br>
+
+
+        <!-- Setting the value using JavaScript -->
+        <input type="month" id="bday-month1" value="2012-12">
+
+        <script>
+            const month = document.querySelector("#bday-month1");
+
+            month.value = "2012-09"
+        </script>
+
+        <!-- Setting maximum and minimum dates -->
+        <form>
+            <label for="birthday">What month were you born in?</label>
+            <input type="month" id="birthday" min="2019-02" max="2019-12" pattern="[0-9]{4}-[0-9]{2}">
+        </form>
+
+
+
+        <h4 style="text-align: center;">time input fields</h4>
+        <!-- type time create input fields designed to let the user easily enter a time (hours and minutes, and optionally seconds). -->
+
+        <!-- Events	change and input -->
+        <!-- Supported common attributes	autocomplete, list, readonly, and step -->
+
+        <label for="appt">Choose a time for your meeting:</label>
+        <input type="time" id="appt" min="09:00" max="18:00" required>
+        <small>Office hours are 9am to 6pm</small><br><br>
+
+        <!-- Setting the value using JavaScript -->
+        <input id="appt-time" type="time" name="appt-time" value="13:30" />
+
+        <script>
+            const appttime = document.querySelector("#appt-time");
+            appttime.value = "12:00";
+        </script>
+
+        <form>
+            <label for="start">Start time</label>
+            <input type="time" id="start-time">
+
+            <p>Value of the time input: "<span id="spa">123</span> ".</p>
+        </form>
+
+        <script>
+            const timepicker = document.querySelector("#start-time");
+            const spa = document.querySelector("#spa");
+
+
+            timepicker.addEventListener("input", () => {
+                spa.innerHTML = timepicker.value;
+            })
+        </script>
+
+        <form>
+            <div>
+                <label for="appt-time">
+                    Choose an appointment time (opening hours 12:00 to 18:00):
+                </label>
+                <input id="appt-time" type="time" name="appt-time" min="12:00" max="18:00" required
+                    pattern="[0-9]{2}:[0-9]{2}" />
+                <span class="validity"></span>
+            </div>
+            <div>
+                <input type="submit" value="Submit form" />
+            </div>
+        </form>
+
+
+        <!-- javascript se input time insert karna -->
+        <script>
+            const inputfield = document.createElement("input");
+            inputfield.type = "time";
+            inputfield.min = "12:00";
+            inputfield.max = "24:00";
+            inputfield.value = "01:30"
+
+            console.log(inputfield.value);
+        </script>
+
+
+
+
+        <h4 style="text-align: center;">weeks input fields</h4>
+        <!-- type week create input fields allowing easy entry of a year plus the ISO 8601 
+        week number during that year (i.e., week 1 to 52 or 53). -->
+
+        <!-- Events	change and input -->
+        <!-- Supported common attributes	autocomplete, list, readonly, and step -->
+
+        <label for="week">What week would you like to start?</label>
+        <input type="week" id="week" value="2017-W01" min="2017-W01" max="2017-W52">
+
+        <script>
+            const week = document.querySelector("#week");
+            // week.value = "2022-W44";
+        </script>
 
 
 
 </body>
-
 </html>
