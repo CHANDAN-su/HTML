@@ -1430,7 +1430,7 @@
         <!-- Supported common attributes	autocomplete, list, readonly, and step -->
 
         <label for="week">What week would you like to start?</label>
-        <input type="week" id="week" value="2017-W01" min="2017-W01" max="2017-W52">
+        <input type="week" id="week" value="2017-W01" min="2017-W01" max="2017-W52"><br><br>
 
         <script>
             const week = document.querySelector("#week");
@@ -1438,6 +1438,133 @@
         </script>
 
 
+        <!-- optgroup element -->
+        <!-- The <optgroup> HTML element creates a grouping of options within a <select> element. -->
+
+        <!-- attribute -> disabled , label -->
+
+        <select name="groups" id="gropus">
+            <optgroup label="group 1">
+                <option value="option 1.1">option 1.1</option>
+            </optgroup>
+            <optgroup label="group 2">
+                <option value="option 2.1">option 2.1</option>
+                <option value="option 2.2">option 2.1</option>
+            </optgroup>
+            <optgroup label="group 3">
+                <option value="option 3.1">option 3.1</option>
+                <option value="option 3.2">option 3.2</option>
+                <option value="option 3.3">option 3.3</option>
+            </optgroup>
+        </select><br>
+
+
+        <!-- option element -->
+        <!-- Is used to define an item contained in a <select>, an <optgroup>, or a <datalist> element. -->
+
+        <!-- attribute -> disabled , label ,selected , value -->
+
+        <select id="pet-select">
+            <option>--Please choose an option--</option>
+            <option value="Dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="Hamster">Hamster</option>
+            <option value="Parrot">Parrot</option>
+            <option value="Spider">Spider</option>
+            <option value="goldfish">goldfish</option>
+        </select><br><br>
+
+
+
+        <!-- select element -->
+        <!-- The <select> HTML element represents a control that provides a menu of options. -->
+
+        <!-- arribute -> disable, multiple , name , required and size ..etc -->
+
+        <select id="pet-select">
+            <option>--Please choose an option--</option>
+            <option value="Dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="Hamster">Hamster</option>
+            <option value="Parrot">Parrot</option>
+            <option value="Spider">Spider</option>
+            <option value="goldfish">goldfish</option>
+        </select><br><br>
+
+
+
+        <!-- datalist element -->
+        <!-- contains a set of <option> elements that represent the permissible or recommended options 
+        available to choose from within other controls. -->
+
+        <!-- Textual types -->
+        <label for="ice-cream-select">Choose a flavor:</label>
+        <input list="ice-cream-flavor" id="ice-cream"><br><br>
+
+        <datalist id="ice-cream-flavor">
+            <option value="Chocolate"></option>
+            <option value="Coconut"></option>
+            <option value="Mint"></option>
+            <option value="Strawberry"></option>
+            <option value="Vanilla"></option>
+        </datalist>
+
+
+        <!-- Date and Time types -->
+        <label for="time-select">Timer select</label>
+        <input type="time" list="time-option">
+
+        <datalist id="time-option">
+            <option value="13:00"></option>
+            <option value="14:00"></option>
+            <option value="15:00"></option>
+        </datalist><br>
+
+        <!-- Range type -->
+        <label for="range-select">Tip amount:</label>
+        <input type="range"  id="range-timer" list="range-suggestive" step="25">
+
+        <datalist id="range-suggestive">
+            <option value="0"></option>
+            <option value="25"></option>
+            <option value="50"></option>
+            <option value="75"></option>
+            <option value="100"></option>
+        </datalist><br>
+
+
+        <!-- Color type -->
+        <label for="color-select">Pick a color</label>
+        <input type="color"  id="pick-color" list="color-suggestive"><br><br>
+
+        <datalist id="color-suggestive">
+            <option value="#800000"></option>
+            <option value="#8B0000"></option>
+            <option value="#A52A2A"></option>
+            <option value="#DC143C"></option>
+        </datalist>
+        
+
+
+        <!-- meter element -->
+        <!-- The <meter> HTML element represents either a scalar value within a known range or a fractional value. -->
+       <!-- attribute -> min, max, low, high, value and option -->
+
+       <label for="fuel">Fuel levels</label>
+        <meter id="fuel" min="0" max="100" low="33" high="70" value="50" optimum="90"></meter><br><br>
+
+
+
+        <!-- progress element -->
+        <!-- The <progress> HTML element displays an indicator showing the completion progress of a task, typically displayed as a progress bar. -->
+
+        <!-- attributes -> value and max -->
+
+        <label for="file">File progress</label>
+        <progress id="file" max="100" value="50">
+            70%
+        </progress>
 
 </body>
+
 </html>
