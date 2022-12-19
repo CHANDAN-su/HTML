@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form css</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- first  -->
+    <!-- <style>
+        .container{
+            width: 400px;
+            border: 1px solid wheat;
+            padding: 40px;
+        }
+
+        label,
+        input,
+        select,
+        textarea{
+
+            /* Fonts and text */
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 100%;
+            font-weight: 400;
+            color: black;
+
+            /* box sizing */
+            box-sizing: border-box;
+            width: 100%;
+            padding: 8px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+    </style> -->
+
+    <!-- Second -->
+    <!-- <style>
+        ul{
+            margin: 20px;
+        }
+
+        fieldset{
+            position: relative;
+        }
+        legend{
+            position: absolute;
+            background-color: black;
+            color: white;
+            bottom: 0;
+            right: 0;
+        }
+    </style> -->
+
+    <!-- Third -->
+    <!-- <style>
+        .container{
+            display: flex;
+        }
+        
+        .appearance{
+            padding: 30px;
+        }
+
+        .appearance input {
+            appearance: none;
+        }
+
+        .appearance-none{
+            padding: 30px;
+        }
+
+        .appearance-none input {
+            /* appearance: none; */
+        }
+
+
+    </style> -->
+
+    <!-- radio and checkbox style -->
+    <!-- <style>
+        input[type="checkbox"]{
+            width: 50px;
+            height: 50px;
+        }
+    </style> -->
+
+    <!-- Using appearance: none on checkboxes style -->
+    <!-- <style>
+        div {
+            padding: 10px;
+        }
+
+        #checkbox {
+            appearance: none;
+        }
+
+        label {
+            padding-left: 10px;
+        }
+
+        input[type="checkbox"] {
+            position: relative;
+            width: 15px;
+            height: 15px;
+            border: 1px solid gray;
+            vertical-align: -5px;
+            color: green;
+        }
+
+        input[type="checkbox"]::before {
+            content: "✔";
+            position: absolute;
+            font-size: 18px;
+            top: -5px;
+            right: 0;
+            visibility: hidden;
+        }
+
+        input[type="checkbox"]:checked::before {
+            visibility: visible;
+        }
+
+        input[type="checkbox"]:disabled{
+            border-color: black;
+            background: #ddd;
+            color: gray;
+        }
+    </style> -->
+
+    <!-- Using appearance: none on radio style -->
+    <!-- <style>
+        input[type="radio"]{
+            appearance: none;
+        }
+
+        input[type="radio"]{
+            position: relative;
+            width: 22px;
+            height: 22px;
+            border: 1px solid black;
+            border-radius: 50%;
+            vertical-align: -6px;
+        }
+
+        input[type="radio"]::before{
+            content: "✔";
+            width: 14px;
+            height: 14px;
+            background-color: rgb(228, 85, 85);
+            border-radius: 50%;
+            color: rgb(228, 85, 85);
+            font-size: 1px;
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            visibility: hidden;
+        }
+
+        input[type="radio"]:checked::before{
+            visibility: visible;
+        }
+
+        /* input[type="radio"]:disabled{
+            background-color: gray;
+        } */
+    </style> -->
+
+
+    <!-- select and datalists -->
+    <!-- <style>
+
+        /* .container{
+            position: relative;
+            display: flex;
+        } */
+
+        /* #select-box {
+            border: none;
+            appearance: none;
+            padding: 0 30px 0 15px;
+            width: 145px;
+            height: 30px;
+            background-color: rgb(65, 65, 150);
+            color: white;
+            font-size: 10px;
+        } */
+
+        /* .container::before{
+            content: "▼";
+            position: absolute;
+            top: 0;
+            left: 103px;
+            color: white;
+            width: 42px;
+            height: 30px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } */
+
+        /* .container .icon-container{
+            position: absolute;
+            font-size: 30px;
+            color: white;
+            top: 0;
+            left: 103px;
+            width: 42px;
+            height: 30px;
+            background-color: rgb(65, 49, 49);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } */
+
+    </style> -->
+
+    <style>
+        body {
+            background-image: url(/image/World\ Map.svg);
+        }
+    </style>
+
+    <!-- date input type style  -->
+    <!-- <style>
+
+        
+        input[type="date"]{
+            position: absolute;
+            transform: translate(50% , 50%);
+            top: 45%;
+            left: 40%;
+            padding: 10px;
+            background-color: rgb(88, 88, 221);
+            outline: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 10px;
+            appearance: none;
+        }
+
+        ::-webkit-calendar-picker-indicator{
+            background-color: white;
+            border-radius: 3px;
+            padding: 5px;
+            cursor: pointer;
+        }
+        
+    </style> -->
+
+
+    <!-- range input type  style -->
+    <!-- <style>
+        .container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 200%;
+            height: 8px;
+            background-color: rgb(48, 48, 109);
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            appearance: none;
+            width: 50px;
+            height: 16px;
+            background-color: rgb(221, 107, 107);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style> -->
+
+
+
+    <!-- color input type style  -->
+    <!-- <style>
+        .container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #style1{
+            -webkit-appearance: none;
+            appearance: none;
+
+            width: 100px;
+            height: 100px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            background-color: transparent;
+        }
+
+        #style1::-webkit-color-swatch{
+            border-radius: 15px;
+            border: none;
+        }
+
+        #style2{
+            appearance: none;
+            width: 100px;
+            height: 100px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background-color: transparent;
+        }
+
+        #style2::-webkit-color-swatch{
+            border-radius: 50%;
+            border: 6px solid black;
+        }
+
+    </style> -->
+
+
+
+    <!-- file input type style  -->
+    <style>
+        /* .container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        } */
+
+        body {
+        font-family: 'Josefin Sans', sans-serif;
+        margin: 20px auto;
+        max-width: 400px;
+      }
+
+      input[type="file"] {
+        height: 0;
+        padding: 0;
+        opacity: 0;
+      }
+
+        label{
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 5px;
+        height: 30px;
+
+        background: linear-gradient(to bottom, #eee, #ccc);
+        border: 1px solid rgb(169, 169, 169);
+        border-radius: 5px;
+        text-align: center;
+        line-height: 1.5;
+      }
+    
+
+      
+    </style>
+
+</head>
+
+<body>
+
+    <!-- first -->
+    <!-- <div class="container">
+    <form>
+        <h1>To: Mozilla</h1>
+
+        <div class="user">
+            <label for="user-name">User Name:</label>
+            <input type="text" name="user-name" id="user-name" placeholder="Enter your user name">
+        </div>
+
+        <div class="gender">
+            <label for="user-gender">Gender:</label>
+            <select id="user-gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="email">
+            <label for="email">User Name:</label>
+            <input type="email" name="email-address" id="email" placeholder="Enter your email">
+        </div>
+
+        <div class="reply">
+            <label for="user-reply">Reply:</label>
+            <textarea name="replay" id="" cols="30" rows="10" placeholder="Enter some message"></textarea>
+        </div>
+
+        <div class="button">
+            <button type="submit">Submit</button>            
+        </div>
+    </form>
+</div> -->
+
+    <!-- Second -->
+    <!-- <form>
+            <fieldset>
+                <legend>Choose all the vegetables you like to eat</legend>
+                <ul>
+                    <li>Carrots <input type="checkbox" name="carrots" id="carrots"></li>
+                    <li>Peas <input type="checkbox" name="Peas" id="Peas"></li>
+                    <li>Cabbage <input type="checkbox" name="Cabbage" id="Cabbage"></li>
+                    <li>Cauliflower <input type="checkbox" name="Cauliflower" id="Cauliflower"></li>
+                    <li>Broccoli <input type="checkbox" name="Broccoli" id="Broccoli"></li>
+                </ul>         
+            </fieldset>
+        </form> -->
+
+    <!-- Third -->
+
+    <!-- <div class="container">
+        <form class="appearance">
+            <div>
+                <label for="search">search:</label>
+                <input type="search" name="search" id="search">
+            </div><br>
+            <div>
+                <label for="text">text:</label>
+                <input type="text" name="text" id="text">
+            </div><br>
+            <div>
+                <label for="date">date:</label>
+                <input type="date" name="date" id="date">
+            </div><br>
+            <div>
+                <label for="radio">radio:</label>
+                <input type="radio" name="radio" id="radio">
+            </div><br>
+            <div>
+                <label for="checkbox">checkbox:</label>
+                <input type="checkbox" name="checkbox" id="checkbox">
+            </div><br>
+            <div>
+                <input type="submit" value="submit">
+            </div><br>
+            <div>
+                <input type="button" value="button">
+            </div>
+        </form>
+
+        <form class="appearance-none">
+            <div>
+                <label for="search">search:</label>
+                <input type="search" name="search" id="search">
+            </div><br>
+            <div>
+                <label for="text">text:</label>
+                <input type="text" name="text" id="text">
+            </div><br>
+            <div>
+                <label for="date">date:</label>
+                <input type="date" name="date" id="date">
+            </div><br>
+            <div>
+                <label for="radio">radio:</label>
+                <input type="radio" name="radio" id="radio">
+            </div><br>
+            <div>
+                <label for="checkbox">checkbox:</label>
+                <input type="checkbox" name="checkbox" id="checkbox">
+            </div><br>
+            <div>
+                <input type="submit" value="submit">
+            </div><br>
+            <div>
+                <input type="button" value="button">
+            </div>
+        </form>
+
+    </div> -->
+
+    <!-- radio and checkbox    
+    <label><span><input type="radio" name="radio" id="radio"></span>True</label>
+    <label><span><input type="checkbox" name="checkbox" id="checkbox"></span></label> -->
+
+
+    <!-- Using appearance: none on radios/checkboxes -->
+    <!-- <form>
+        <fieldset>
+            <legend>Fruit perferences</legend>
+
+            <div>
+                <input type="checkbox" name="checkbox" id="checkbox"><label>I like cherry</label>
+            </div>
+            <div>
+                <input type="checkbox" name="checkbox" id="checkbox" disabled><label>I can't like banana</label>
+            </div>
+            <div>
+                <input type="checkbox" name="checkbox" id="checkbox"><label>I like strawberry</label>
+            </div>
+
+        </fieldset>
+    </form> -->
+
+    <!-- Using appearance: none on radio style -->
+    <!-- <form>
+        <fieldset>
+            <legend>Fruit perferences</legend>
+
+            <div>
+                <input type="radio" name="radio" id="radio"><label>I like cherry</label>
+            </div>
+            <div>
+                <input type="radio" name="radio" id="radio"><label>I can't like banana</label>
+            </div>
+            <div>
+                <input type="radio" name="radio" id="radio"><label>I like strawberry</label>
+            </div>
+
+        </fieldset> -->
+    <!-- </form> -->
+
+
+
+    <!-- Selects and Datalists -->
+
+    <!-- <div class="container">
+        <select id="select-box">
+            <option value="">Select An Option</option>
+            <option value="First">First</option>
+            <option value="Second">Second</option>
+            <option value="Third">Third</option>
+            <option value="Fourth">Fourth</option>
+        </select>
+
+        <div class="icon-container">
+            <i class="fa-solid fa-caret-down"></i>
+        </div>
+    </div> -->
+
+
+
+    <!-- date input type -->
+    <!-- <input type="date"> -->
+
+
+    <!-- range input type -->
+    <!-- <div class="container">
+        <input type="range" id="range" min="0" max="50" step="5">
+    </div> -->
+
+
+
+    <!-- color input type -->
+    <!-- <div class="container">
+        <input type="color" value="#ffb721" id="style1">
+        <input type="color"  id="style2" value="#43da86">
+    </div> -->
+
+
+    <!-- file input type  -->
+    <label for="file">Choose a file to upload</label>
+    <input id="file" name="file" type="file" multiple>
+
+</body>
+
+</html>
