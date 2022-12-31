@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form JS</title>
+
+    <style>
+        /* body {
+            font: 1em sans-serif;
+            width: 200px;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        p * {
+            display: block;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            border: 1px solid black;
+            margin: 0;
+            padding: 3px;
+            font-family: inherit;
+            font-size: 90%;
+            box-sizing: border-box;
+        } */
+
+        /* This is our style for the invalid fields */
+        /* input:invalid {
+            border-color: #900;
+            background-color: #fdd;
+        }
+
+        input:focus:invalid {
+            outline: none;
+        }
+
+        .error {
+            width: 100%;
+            background-color: red;
+            color: white;
+            border-radius: 4px;
+            margin: 1px;
+        }
+
+        .error:hover {
+            background-color: black;
+            color: white;
+        } */
+
+        body {
+            font: 1em sans-serif;
+            width: 200px;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        p * {
+            display: block;
+        }
+
+        input[type="email"] {
+            appearance: none;
+
+            width: 100%;
+            border: 1px solid #333;
+            margin: 0;
+
+            font-family: inherit;
+            font-size: 90%;
+
+            box-sizing: border-box;
+        }
+
+        /* This is our style for the invalid fields */
+        input:invalid {
+            border-color: #900;
+            background-color: #fdd;
+        }
+
+        input:focus:invalid {
+            outline: none;
+        }
+
+        /* This is the style of our error messages */
+        .error {
+            width: 100%;
+            padding: 0;
+
+            font-size: 80%;
+            color: white;
+            background-color: #900;
+            border-radius: 0 0 5px 5px;
+
+            box-sizing: border-box;
+        }
+
+        .error.active {
+            padding: 0.3em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Implementing a customized error message -->
+    <!-- <form>
+        <label for="mail">I would like you to provide me with an email address:</label>
+        <input type="email" name="mail" id="mail" required>
+        <br><br>
+
+        <label for="name">First name:</label>
+        <input type="text" name="name" id="name" pattern="[A-Z]{1}[a-z]{3,20}">
+        <br><br>
+
+        <label for="lname"></label>
+        <input type="text" name="lname" id="lname" minlength="3" maxlength="6">
+        <br><br>
+
+        <label for="num"></label>
+        <input type="number" name="num" id="num" min="2">
+        <button>Submit</button>
+    </form>
+
+    <script>
+
+        // email typeMismatch 
+        const email = document.getElementById("mail");
+        email.addEventListener("input", ()=>{
+            // console.log("Hii");
+            if (email.validity.typeMismatch) {
+                email.setCustomValidity("I am expecting an e-mail address!")
+            } else {
+                email.setCustomValidity("")
+            }
+
+        });
+
+
+        //patternMismatch
+        const name = document.getElementById("name");
+        name.addEventListener("input" , ()=>{
+            if (name.validity.patternMismatch) {
+                name.setCustomValidity("Enter valid name");
+            } else {
+                name.setCustomValidity("");
+            }
+        });
+
+
+        //tooShort
+        const lname =document.getElementById("lname");
+        lname.addEventListener("input", ()=>{
+
+            if (lname.validity.tooShort) {
+                lname.setCustomValidity("minimum 3 word");
+            } else {
+                lname.setCustomValidity("");
+            }
+        });
+    </script> -->
+
+
+    <form novalidate>
+        <p>
+            <label for="mail">Email:</label>
+                <input type="email" name="mail" id="mail" required minlength="10">
+                <span class="error"></span>
+            
+        </p>
+
+        <button>Submit</button>
+    </form>
+
+
+    <script>
+        const form = document.querySelector("form");
+        const email = document.getElementById("mail");
+        const emailerror = document.querySelector(".error");
+
+
+        email.addEventListener("input", (event) => {
+
+            // first
+            // if (email.validity.valid) {
+            //     // emailerror.textContent = "";
+            //     // emailerror.className = "error"
+            // } else if (email.validity.valueMissing) {
+            //     emailerror.textContent = "You need to enter an email address.";
+            // } else if (email.validity.typeMismatch) {
+            //     emailerror.textContent = "Entered value needs to be an email address.";
+            // } else if (email.validity.tooShort) {
+            //     emailerror.textContent = `Email should be at least ${email.minLength} 
+            //     characters; you entered ${email.value.length}.`
+            // }
+
+            // second
+            if (email.validity.valueMissing) {
+                emailerror.textContent = "You need to enter an email address.";
+            } else if (email.validity.typeMismatch) {
+                emailerror.textContent = "Entered value needs to be an email address.";
+            } else if (email.validity.tooShort) {
+                emailerror.textContent = `Email should be at least ${email.minLength} 
+                characters; you entered ${email.value.length}.`
+            }
+
+        });
+
+
+        form.addEventListener("submit", (event) => {
+            // if the email field is valid, we let the form submit
+            if (!email.validity.valid) {
+                // If it isn't, we display an appropriate error message
+                showerror();
+                // Then we prevent the form from being sent by canceling the event
+                event.preventDefault();
+            }
+        });
+
+
+
+        function showerror() {
+             if (email.validity.valueMissing) {
+                emailerror.textContent = "You need to enter an email address.";
+            } else if (email.validity.typeMismatch) {
+                emailerror.textContent = "Entered value needs to be an email address.";
+            } else if (email.validity.tooShort) {
+                emailerror.textContent = `Email should be at least ${email.minLength} 
+                characters; you entered ${email.value.length}.`
+            }
+
+            // emailerror.className = "error active";
+        }
+
+        </script>
+    
+
+</body>
+
+</html>
