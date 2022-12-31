@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: bisque;
+        }
+
+        /* range example */
+        .container {
+            position: absolute;
+            left: 18%;
+            top: 0%;
+            transform: translate(64%, 10%);
+        }
+
+        /* input[type="range"]{
+        appearance: none;
+        width: 109px;
+        height: 28px;
+        background-color: rgb(129, 129, 211);
+        border-radius: 5px;
+        }
+
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;    
+    width: 20px;
+    height: 28px;
+    background-color: aqua;
+    border-radius: 5px;
+}
+
+#span{
+    font-size: 36px;
+    color: brown;
+    margin-left: 15px;
+}
+
+button{
+    display: block;
+    width: 109px;
+    height: 28px;
+} */
+
+        fieldset {
+            position: relative;
+            border: 2px double black;
+            background-color: azure;
+            padding: 20px;
+            width: 250px;
+        }
+
+        legend {
+            position: absolute;
+            top: -13px;
+            left: 15px;
+            background-color: black;
+            color: white;
+            padding: 3px;
+            border-radius: 3px;
+            font-size: medium;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 600;
+
+        }
+
+        fieldset>div {
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: medium;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 550;
+        }
+
+        input {
+            display: block;
+            width: 90%;
+            height: 15px;
+            outline: none;
+            /* border-top: none;
+            border-left: none;
+            border-right: none; */
+            border: 1px solid rgb(241, 225, 195);
+            border-radius: 5px;
+            padding: 5px;
+            /* background-color: transparent; */
+        }
+
+        button {
+            cursor: pointer;
+            width: 116px;
+            background-color: rgb(24, 23, 23);
+            color: white;
+            padding: 5px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border-radius: 3px;
+        }
+
+
+
+
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input+span {
+            position: relative;
+        }
+
+
+        span::before {
+            position: absolute;
+            top: -48px;
+            left: 195px;
+        }
+
+
+        /* required ke liye */
+        input:required+span::before {
+            /* content: "required"; */
+            background-color: black;
+            color: rgb(240, 224, 224);
+            padding: 3px;
+            font-size: 10px;
+            border-radius: 1px;
+        }
+
+        /* range ke liye */
+        /* input:out-of-range {
+            color: red;
+        }
+
+        input:in-range {
+            color: green;
+        } */
+
+
+        input:out-of-range+span::before {
+            position: absolute;
+            top: -48px;
+            left: 137px;
+            content: "your age out of range";
+            background-color: red;
+            color: white;
+            width: 90px;
+            padding: 3px;
+            font-size: 10px;
+            border-radius: 1px;
+        }
+
+
+
+        span::after {
+            position: absolute;
+            top: -26px;
+            left: 214px;
+        }
+
+        /* valid and in valid ke liye */
+        input:invalid {
+            color: red;
+        }
+
+        input:valid {
+            color: green;
+        }
+
+        input:invalid+span::after {
+            content: "✖";
+            color: rgb(226, 143, 143);
+        }
+
+
+        input:valid+span::after {
+            content: "✓";
+            color: green;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- range example -->
+    <!-- <div class="container">
+        <input type="range" name="range" id="silder">
+        <span id="span">Process...  0%</span>
+        <button>Submit</button>
+    </div> -->
+
+    <form>
+        <div class="container">
+            <fieldset>
+                <legend>Feedback form</legend>
+
+                <div>
+                    <label for="fname">First Name:</label>
+                    <input type="text" minlength="3" maxlength="20" pattern="[A-Z]{1}[a-z]{1,20}" name="fname"
+                        id="fname" required title="One letter uppercase minimal 3 to 20 word">
+                    <span class="validition"></span>
+                </div>
+
+                <div>
+                    <label for="lname">Last Name:</label>
+                    <input type="text" name="lname" minlength="3" maxlength="20" pattern="[A-Z]{1}[a-z]{1,20}"
+                        id="lname" required title="One letter uppercase minimal 3 to 20 word">
+                    <span class="validition"></span>
+                </div>
+
+                <div>
+                    <label for="age">Age:</label>
+                    <input type="number" min="10" max="20" name="age" id="age" required
+                        title="Minimal age 10 to 20 word">
+                    <span class="validition"></span>
+                </div>
+
+                <div>
+                    <label for="email">Email (Vaild email):</label>
+                    <input type="email" name="email" id="email" required title="Enter your valid email">
+                    <span class="validition"></span>
+                </div>
+
+                <div>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+
+            </fieldset>
+        </div>
+    </form>
+
+
+    <script>
+
+        console.log("Hello world");
+
+        // range example
+        // const btn = document.querySelector("button");
+
+        // silder.value = 0;
+
+        // btn.addEventListener("click", ()=> {
+
+        //     setInterval(() => {
+        //         silder.value++;
+        //         span.innerHTML = "Process... " + silder.value + "%";
+        //     }, 200);    
+        // });
+
+
+        let params = new URLSearchParams(document.location.search);
+
+        let firstname = params.get("fname");
+        let lastname = params.get("lname");
+        let age = params.get("age");
+        let email = params.get("email");
+
+        console.log(`${firstname} , ${lastname} , ${age} , ${email}`);
+
+    </script>
+
+
+</body>
+
+</html>
