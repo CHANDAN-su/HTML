@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form css</title>
+    <style>
+        /* required or not */
+        /* fieldset {
+            position: relative;
+            width: 400px;
+            margin: 20px;
+        }
+
+        legend {
+            background-color: black;
+            color: white;
+            padding: 8px;
+            border-radius: 2px;
+            position: absolute;
+            top: -15px;
+            left: 45px;
+        }
+
+        div {
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            margin-left: 3px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        input {
+            width: 100%;
+            height: 20px;
+            border-radius: 5px;
+            padding: 3px;
+        }
+
+        input:required {
+            border: 1px solid black;
+        }
+
+        input:optional {
+            border: 1px solid silver;
+        }
+
+        button {
+            width: 200px;
+            height: 30px;
+        } */
+
+
+
+
+
+
+        /* Required fields are labelled with "required". */
+        /* fieldset{
+            position: relative;
+            width: 530px;
+            margin: 120px;
+            border: 2px dotted black;
+        }
+
+        legend{
+            position: absolute;
+            top: -13px;
+            left: 41px;
+            background-color: black;
+            color: white;
+            padding: 6px;
+        }
+
+        .container{
+            margin: 29px;
+            font-size: 20px;
+        }
+        div{
+            margin-top: 10px;
+        }
+
+        label{
+            display: block;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        input{
+            width: 100%;
+            height: 25px;
+            border-radius: 5px;
+            box-shadow: inset 1px 1px 3px #ccc;
+            padding-left: 10px;
+            
+        }
+
+        input:hover, input:focus{
+            background-color: whitesmoke;
+        }
+
+        span{
+            position: relative;
+        }
+
+        input:required + span::before{
+            content: "required";
+            position: absolute;
+            top: -59px;
+            right: -482px;
+            background-color: black;
+            color: white;
+            font-size: 12px;
+            padding: 4px 15px 4px 15px;
+        } */
+
+
+
+
+
+        /* Styling controls based on whether their data is valid */
+        /* fieldset{
+            position: relative;
+            width: 530px;
+            margin: 120px;
+            border: 2px dotted black;
+        }
+
+        legend{
+            position: absolute;
+            top: -13px;
+            left: 41px;
+            background-color: black;
+            color: white;
+            padding: 6px;
+        }
+
+        .container{
+            margin: 29px;
+            font-size: 20px;
+        }
+        div{
+            margin-top: 10px;
+        }
+
+        label{
+            display: block;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        input{
+            width: 100%;
+            height: 25px;
+            border-radius: 5px;
+            box-shadow: inset 1px 1px 3px #ccc;
+            padding-left: 10px;
+            
+        }
+
+        input:hover, input:focus{
+            background-color: whitesmoke;
+        }
+
+        span{
+            position: relative;
+        }
+
+        span::after{
+            position: absolute;
+            top: -59px;
+            right: -482px;
+            background-color: black;
+            color: white;
+            font-size: 12px;
+            padding: 4px 15px 4px 15px;
+        }     
+
+        input:required + span:after{
+            content: "required";
+        }
+
+        input:out-of-range + span::after{
+            content: "Outside allowable value range";
+            background-color: red;
+        }
+
+        input:invalid{
+            border: 2px solid red;
+        }
+
+        input:valid{
+            border: 2px solid green;
+        }
+        
+        span::before{
+            position: absolute;
+            top: -29px;
+            left: 493px;
+        }
+
+        input:invalid + span::before{
+            content: "✖";
+            color: red;
+        }
+
+        
+        input:valid + span:before{
+            content: "✓";
+            color: green;
+        } */
+
+
+
+        /* disable */
+        /*         
+        body {
+        font-family: 'Josefin Sans', sans-serif;
+        margin: 20px auto;
+        max-width: 460px;
+      }
+
+        fieldset {
+        padding: 10px 30px 0;
+        margin-bottom: 20px;
+      }
+
+      legend {
+        color: white;
+        background: black;
+        padding: 5px 10px;
+      }
+
+      fieldset > div {
+        margin-bottom: 20px;
+        display: flex;
+      }
+
+      button, label, input[type="text"] {
+        display: block;
+        font-family: inherit;
+        font-size: 100%;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 5px;
+        height: 30px;
+      }
+
+      input {
+        box-shadow: inset 1px 1px 3px #ccc;
+        border-radius: 5px;
+      }
+
+      input:hover, input:focus {
+        background-color: #eee;
+      }
+
+      input[type="text"]:disabled {
+          background: #eee;
+          border: 1px solid #ccc;
+      }
+
+      .disabled-label {
+        color: #aaa;
+      }
+
+      button {
+        width: 60%;
+        margin: 0 auto;
+      } */
+
+
+        /* Read-only and read-write  */
+        /* body{
+        position: absolute;
+        left: 50px;
+        top: 1px;
+        transform: translate(80%,1%);
+      }
+
+      fieldset{
+        width: 450px;
+        position: relative;
+        border: 2px solid black;
+        margin-bottom: 20px;
+        padding: 20px;
+      }
+
+      legend{
+        position: absolute;
+        top: -19px;
+        left: 25px;
+        background-color: black;
+        color: white;
+        padding: 6px;
+        font-size: 18px;
+        font-weight: 400;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+
+      fieldset > div{
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+       input[type="text"], textarea{
+        display: block;
+        box-sizing: border-box;
+        padding: 5px;
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 500;
+        border-radius: 5px;
+
+        width: 60%;
+      }
+
+      .first div input , .first div textarea{
+        border: none;
+      }
+
+      textarea{
+        resize: none;
+      }
+      label{
+        width: 40%;
+      }
+
+      button{
+        width: 60%;
+        height: 30px;
+        margin-bottom: 10px;
+        margin-left: 80px;
+      }
+
+      :is(input:read-only , textarea:read-only){
+        outline: none;
+      } */
+
+
+
+
+
+        /* Radio and checkbox states — checked, default, indeterminate style  */
+
+
+        input[type="radio"] {
+            appearance: none;
+            position: relative;
+            width: 30px;
+            height: 30px;
+            border: 2px solid rgb(15, 15, 15);
+            border-radius: 50px;
+        }
+
+        input[type="radio"]::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50px;
+            background-color: red;
+            visibility: hidden;
+            transition: .25s;
+        }
+
+        input[type="radio"]:checked::before {
+            visibility: visible;
+        }
+
+        input~span {
+            position: relative;
+            vertical-align: 6px;
+        }
+
+        input:default~span::before {
+            font-size: 0.7rem;
+            position: absolute;
+            content: "Default";
+            color: white;
+            background-color: black;
+            padding: 5px 10px;
+            right: -65px;
+            top: -3px;
+        }
+
+        input[type="radio"]:indeterminate {
+            border: 2px solid red;
+            animation: 0.4s linear infinite alternate border-pulse;
+        }
+
+        @keyframes border-pulse {
+            from {
+                border: 2px solid red;
+            }
+
+            to {
+                border: 6px solid red;
+            }
+        }
+
+        label {
+            vertical-align: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- required or not -->
+    <!-- <form>
+        <fieldset>
+            <legend>Feedback form</legend>
+
+            <div>
+                <label for="first-name">First name:</label>
+                <input type="text" name="first-name" id="first-name" required>
+            </div>
+
+            <div>
+                <label for="last-name">Last name:</label>
+                <input type="text" name="last-name" id="last-name" required>
+            </div>
+
+            <div>
+                <label for="email">Email address (include if you want a response):</label>
+                <input type="text" name="email" id="email" optional>
+            </div>
+            <div>
+                <button>Submit</button>
+            </div>
+
+        </fieldset>
+    </form> -->
+
+
+
+    <!-- Required fields are labelled with "required". -->
+    <!-- <form>
+        <fieldset>
+            <legend>Feedback form</legend>
+
+            <div class="container">
+                <p style="margin-bottom: 30px; font-weight: bold;">Required fields are labelled with "required".</p>
+
+                <div>
+                    <label for="first-name">First name:</label>
+                    <input type="text" name="first-name" id="first-name" required>
+                    <span></span>
+                </div>
+    
+                <div>
+                    <label for="last-name">Last name:</label>
+                    <input type="text" name="last-name" id="last-name" required>
+                    <span></span>
+                </div>
+    
+                <div>
+                    <label for="email">Email address (include if you want a response):</label>
+                    <input type="text" name="email" id="email" optional>
+                    <span></span>
+                </div>
+                
+                <div>
+                <button>Submit</button>
+             </div>
+
+            </div>
+        </fieldset>
+    </form> -->
+
+
+
+    <!-- Styling controls based on whether their data is valid -->
+    <!-- <form>
+        <fieldset>
+            <legend>Feedback form</legend>
+
+            <div class="container">
+                <p style="margin-bottom: 30px; font-weight: bold;">Required fields are labelled with "required".</p>
+
+                <div>
+                    <label for="first-name">First name:</label>
+                    <input type="text" name="first-name" minlength="3" id="first-name" required>
+                    <span></span>
+                </div>
+    
+                <div>
+                    <label for="last-name">Last name:</label>
+                    <input type="text" name="last-name" id="last-name" required>
+                    <span></span>
+                </div>
+    
+                <div>
+                    <label for="age">Age (15 year old):</label>
+                    <input type="number" name="age" id="age" required min="10" max="20">
+                    <span></span>
+                </div>
+
+                <div>
+                    <label for="email">Email address (include if you want a response):</label>
+                    <input type="text" name="email" id="email" required>
+                    <span></span>
+                </div>
+                
+                <div>
+                <button>Submit</button>
+             </div>
+
+            </div>
+        </fieldset>
+    </form> -->
+
+
+    <!-- disabled -->
+    <!-- <form>
+        <fieldset id="shipping">
+          <legend>Shipping address</legend>
+          <div>
+            <label for="name1">Name: </label>
+            <input id="name1" name="name1" type="text" required />
+          </div>
+          <div>
+            <label for="address1">Address: </label>
+            <input id="address1" name="address1" type="text" required />
+          </div>
+          <div>
+            <label for="pcode1">Zip/postal code: </label>
+            <input id="pcode1" name="pcode1" type="text" required />
+          </div>
+        </fieldset>
+
+        <fieldset id="billing">
+          <legend>Billing address</legend>
+          <div>
+            <label for="billing-checkbox">Same as shipping address:</label>
+            <input type="checkbox" id="billing-checkbox" checked />
+          </div>
+          <div>
+            <label for="name" class="billing-label disabled-label">Name: </label>
+            <input id="name" name="name" type="text" disabled required />
+          </div>
+          <div>
+            <label for="address2" class="billing-label disabled-label">
+              Address:
+            </label>
+            <input id="address2" name="address2" type="text" disabled required />
+          </div>
+          <div>
+            <label for="pcode2" class="billing-label disabled-label">
+              Zip/postal code:
+            </label>
+            <input id="pcode2" name="pcode2" type="text" disabled required />
+          </div>
+        </fieldset>
+      
+        <div><button>Submit</button></div>
+      </form>
+      
+      <script>
+
+        document.addEventListener( "DOMContentLoaded",()=> {
+            // console.log("hii");
+
+            // Attach `change` event listener to checkbox
+            document.getElementById("billing-checkbox")
+            .addEventListener("change" , togglebilling)
+        });
+
+
+        function togglebilling(){
+            // console.log("change");
+
+            const billingitem = document.querySelectorAll("#billing input[type='text']");
+            const billinglabel = document.querySelectorAll(".billing-label");
+
+            for(let i = 0; i < billingitem.length; i++){
+                // console.log(billingitem[i].disabled);
+                // console.log(!billingitem[i].disabled);
+                billingitem[i].disabled = !billingitem[i].disabled
+
+                if (billinglabel[i].getAttribute("class") == "billing-label disabled-label") {
+                    billinglabel[i].setAttribute("class", "billing-label")
+                } else {
+                    billinglabel[i].setAttribute("class", "billing-label disabled-label")
+                }
+            }
+
+        }
+      </script> -->
+
+
+    <!-- Read-only and read-write -->
+    <!-- <form>
+
+        <fieldset class="first">
+            <legend>Check shipping details</legend>
+
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" value="Mr Soft" readonly>
+            </div>
+            <div>
+                <label for="address">Address:</label>
+                <textarea name="address"  id="address" cols="25" readonly rows="06" >23 Elastic Way,
+Viscous,
+Bright Ridge,
+CA
+                </textarea>
+            </div>
+            <div>
+                <label for="pincode">Zip/postal code:</label>
+                <input type="text" readonly name="pincode" id="pincode" value="970456">
+            </div>
+        </fieldset>
+
+        <fieldset class="second">
+            <legend>Final instructions</legend>
+
+            <div>
+                <label for="checkbox">Send confirmation <br> by SMS?</label>
+                <input type="checkbox" name="checkbox" id="checkbox">
+            </div>
+            <div>
+                <label for="speical">Any special <br> instructions?</label>
+                <textarea name="speical" id="speical" read-write cols="25" rows="07"></textarea>
+            </div>
+        </fieldset>
+        <div>
+            <button>Amend details</button>
+            <button>Sunmit</button>
+        </div>
+    </form> -->
+
+
+
+    <!-- Radio and checkbox states — checked, default, indeterminate -->
+
+    <form>
+        <div>
+            <input type="radio" name="BMW" id="BMW">
+            <label for="BMW">BMW</label>
+        </div>
+        <div>
+            <input type="radio" name="BMW1" id="BMW1" >
+            <label for="BMW1">BMW1</label>
+            <span></span>
+        </div>
+        <div>
+            <input type="radio" name="BMW2" id="BMW2">
+            <label for="BMW2">BMW2</label>
+        </div>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
