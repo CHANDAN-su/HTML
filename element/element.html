@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/element/element.css">
+</head>
+
+<body>
+
+    <!-- address element  -->
+    <!-- The <address> HTML element indicates that the enclosed HTML provides contact information for a person or people, or for an organization. -->
+    <p>Contact the author of this page</p>
+
+    <address>
+        <a href="mailto:chandan7073251686@gmail.com">chandan7073251686@gmail.com</a><br>
+        <a href="tel:+9116690334">(+91) 91-1669-0334</a>
+    </address>
+
+    <address>
+        You can contact author at
+        <a href="http://www.somedomain.com/contact"> www.somedomain.com</a>.<br />
+        If you see any bugs, please
+        <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.<br />
+        You may also want to visit us:<br />
+        Mozilla Foundation<br />
+        331 E Evelyn Ave<br />
+        Mountain View, CA 94041<br />
+        USA
+    </address><br><br>
+
+
+    <!-- area element -->
+    <!-- The Image Map Area element -->
+    <!-- The <area> HTML element defines an area inside an image map that has predefined clickable areas. -->
+
+    <!-- attribute
+    alt -> A text string alternative to display on browsers that do not display images.
+    coords -> The coords attribute details the coordinates of the shape attribute in size, shape, and placement of an <area>.
+        #rect -> the value is x1,y1,x2,y2. The value specifies the coordinates of the top-left and bottom-right corner of the rectangle.
+        #circle -> the value is x,y,radius. Value specifies the coordinates of the circle center and the radius.
+        #poly -> the value is x1,y1,x2,y2,..,xn,yn. Value specifies the coordinates of the edges of the polygon.
+    herf -> The hyperlink target for the area. Its value is a valid URL.
+    shape -> The shape of the associated hot spot. rect , circle , poly -->
+
+
+    <!-- <area shape="rect" coords="0,0,253,27" href="/image/aaesthetic.jpg" alt=""> -->
+
+    <img src="/image/Frame 1.png" usemap="#area">
+
+    <map name="area">
+        <area shape="rect" coords="76,80,225,130" href="https://www.google.com/" target="_blank">
+        <area shape="rect" coords="268,80,450,130" href="https://www.facebook.com/" target="_blank">
+        <area shape="rect" coords="495,80,656,130"
+            href="https://www.amazon.in/?&ext_vrnc=hi&tag=googinhydr1-21&ref=pd_sl_833o4zmtnn_b&adgrpid=55759171661&hvpone=&hvptwo=&hvadid=617721279979&hvpos=&hvnetw=g&hvrand=11904342622018452815&hvqmt=b&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007805&hvtargid=kwd-326600735004&hydadcr=5840_2361992&gclid=CjwKCAiAwc-dBhA7EiwAxPRylJYWPGEbkA2cziD3mhhrGro5hqvv9ofsBuXoABbnusUDjdazoC9YGhoCd9cQAvD_BwE"
+            target="_blank">
+        <area shape="rect" coords="702,80,823,130" href="https://www.uber.com/in/en/" target="_blank">
+        <area shape="rect" coords="76,190,251,240" href="https://www.microsoft.com/en-in" target="_blank">
+        <area shape="rect" coords="284,190,477,239" href="https://www.instagram.com/" target="_blank">
+        <area shape="rect" coords="511,190,633,240" href="https://www.zomato.com/" target="_blank">
+        <area shape="rect" coords="700,190,811,240" href="https://www.ibm.com/in-en" target="_blank">
+    </map>
+
+
+
+    <!-- article element -->
+    <!-- The Article Contents element -->
+    <!-- Examples include: a forum post, a magazine or newspaper article, or a blog entry, 
+        a product card, a user-submitted comment, an interactive widget or gadget, or any 
+        other independent item of content. -->
+
+    <article class="forecast">
+        <h2>Wheather forcast for Seattle</h2>
+        <article class="rain">
+            <div class="details">
+                <h4>03 March 2018</h4>
+                <p>Rain</p>
+            </div>
+        </article>
+        <article class="rain">
+            <div class="details">
+                <h4>04 March 2018</h4>
+                <p>Periods of rain</p>
+            </div>
+        </article>
+        <article class="rain">
+            <div class="details">
+                <h4>05 March 2018</h4>
+                <p>Heavy Rain</p>
+            </div>
+        </article>
+    </article><br><br>
+
+
+
+    <!-- aside element -->
+    <!-- The <aside> HTML element represents a portion of a document whose content is only indirectly related to the document's main content. -->
+
+    <article class="aside">
+        <p>Salamanders are a group of amphibians with a lizard-like appearance, including short legs and a tail in both
+            larval and adult forms.</p>
+
+        <div class="aside1">
+            <aside class="aside2">
+                <p>Several species of salamander inhabit the temperate rainforest of the Pacific Northwest, including
+                    the Ensatina, the Northwestern Salamander and the Rough-skinned Newt. Most salamanders
+                    are nocturnal, and hunt for insects, worms and other small creatures.</p>
+            </aside>
+            <aside>
+                <p class="aside3">The Rough-skinned Newt defends itself with a deadly neurotoxin.</p>
+            </aside>
+        </div>
+    </article>
+
+    <!-- code element -->
+    <!-- The <code> HTML element displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code. -->
+
+    <p>Lorem ipsum dolor <code>push()</code> sit, amet consectetur adipisicing elit. Deserunt nesciunt placeat, quia
+        officiis sit maxime possimus unde mollitia laudantium nemo.</p>
+
+
+
+    <!-- pre element -->
+    <!-- The text is typically rendered using a non-proportional, or monospaced, font. Whitespace inside this element is displayed as written. -->
+    <pre>
+        L          TE
+    A       A
+      C    V
+       R A
+       DOU
+       LOU
+      REUSE
+      QUE TU
+      PORTES
+    ET QUI T'
+    ORNE O CI
+     VILISÉ
+    OTE-  TU VEUX
+     LA    BIEN
+    SI      RESPI
+            RER       - Apollinaire
+    </pre>
+
+    <pre>
+        pre{
+            background-color: aqua;
+            display: inline-block;
+        }
+    </pre>
+
+    <pre>
+        for (let index = 0; index < array.length; index++) {
+            const element = array[index];
+            console.log(element)
+            
+        }
+    </pre>
+
+
+    <!-- details and summary -->
+
+    <!-- details element -->
+    <!-- The <details> HTML element creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state.  -->
+
+    <!-- arrributes
+    open -> This Boolean attribute indicates whether the details  -->
+
+    <!-- events
+    toggle -> The toggle event fires when the open/closed state of a <details> element is toggled.
+
+    details.addEventListener("toggle", (event) => {
+        if (details.open) {
+        /* the element was toggled open */
+         } else {
+        /* the element was toggled closed */
+        }
+        });
+    
+    -->
+
+    <!-- summary element -->
+    <!-- The <summary> HTML element specifies a summary, caption, or legend for a <details> element's disclosure box. Clicking the <summary> element toggles the state of the parent <details> element open and closed. -->
+
+    <!-- example -->
+    <details>
+        <summary>Details</summary>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, rum. Something small enough to escape
+            casual notice.</p>
+    </details>
+
+    <details open>
+        <summary>Details</summary>
+        <p> Something small enough to escape casual notice.</p>
+    </details><br>
+
+
+    <!-- dialog element -->
+    <!-- The <dialog> HTML element represents a dialog box or other interactive component, such as a dismissible alert, inspector, or subwindow. -->
+
+    <!-- attribute
+    open ->Indicates that the dialog is active and can be interacted with. 
+    When the open attribute is not set, the dialog shouldn't be shown to the user. It is recommended to use the .show() or .showModal() methods to render dialogs
+    The close event is fired on an HTMLDialogElement object when the <dialog> it represents has been closed. 
+    not submitted, the <dialog> closes, and the returnValue property gets set to the value of the button that was used to save the form's state.-->
+
+    <!-- usage notes 
+    <form> elements can close a <dialog> if they have the attribute method="dialog" or if the button used to submit the form has formmethod="dialog" set. -->
+
+    <div>
+        <!-- <dialog open> -->
+        <dialog>
+            <p>Greetings, one and all!</p>
+            <form method="dialog">
+                <button>Ok</button>
+            </form>
+        </dialog>
+    </div>
+
+
+    <dialog id="diologbox">
+        <form method="dialog">
+            <button id="close">X</button>
+            <p>
+                <label for="anilmal">Favorite animal:</label>
+                <select id="anilmal">
+                    <option value="choose.." default>Choose....</option>
+                    <option value="brine-shrimp">Brine brine-shrimp</option>
+                    <option value="red-panda">Red panda</option>
+                    <option value="spider-monkey">Spinder monkey</option>
+                </select>
+            </p>
+            <button type="reset">Reset</button>
+            <button id="comfirm">Comfirm</button>
+        </form>
+    </dialog>
+
+    <p>
+        <button id="showdialog">Show the dialog</button>
+    </p>
+
+    <script>
+
+        (() => {
+            const showdialog = document.getElementById("showdialog");
+            const diologbox = document.getElementById("diologbox");
+            const selectbtn = document.getElementById("anilmal");
+            const comfirm = document.querySelector("#comfirm");
+            const close = document.getElementById("close");
+
+            showdialog.addEventListener("click", () => {
+                diologbox.showModal();
+            });
+
+            selectbtn.addEventListener("change", () => {
+                comfirm.value = selectbtn.value;
+            });
+
+            diologbox.addEventListener("close", () => {
+                console.log(`Return value: "${diologbox.returnValue}"`);
+            });
+
+            close.addEventListener("click", (e) => {
+                diologbox.close();
+            });
+
+        })();
+    </script>
+
+
+    <!-- footer element -->
+    <!-- The <footer> HTML element represents a footer for its nearest ancestor sectioning content or sectioning root element. -->
+    <!-- A <footer> typically contains information about the author of the section, copyright data or links to related documents. -->
+
+    <footer>
+        <h1>How to be a wizard</h1>
+        <ol>
+            <li>Grow a long, majestic beard.</li>
+            <li>Wear a tall, pointed hat.</li>
+            <li>Have I mentioned the beard?</li>
+        </ol>
+        <footer>
+            <h3>© 2018 Gandalf</h3>
+        </footer>
+    </footer>
+
+
+    <!-- header element -->
+    <!-- The <header> HTML element represents introductory content, typically a group of introductory or navigational aids. -->
+    <!-- a logo, a search form, an author name, and other elements. -->
+
+    <header>
+        <a class="link" href="#">Cute Puppies Express!</a>
+    </header>
+
+    <article>
+        <header>
+            <h2>Beagles</h2>
+            <time>08.12.2014</time>
+        </header>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse ratione fuga eius inventore commodi,
+            perspiciatis quisquam ea architecto reiciendis a, quos voluptatem! Saepe?
+        </p>
+    </article>
+
+
+    <!-- hgroup element -->
+    <!-- The <hgroup> HTML element represents a heading and related content. It groups a single <h1>–<h6> element with one or more <p>. -->
+    
+    <hgroup>
+        <h1>Frankenstein</h1>
+        <p>Or: The Modern Prometheus</p>
+    </hgroup>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
