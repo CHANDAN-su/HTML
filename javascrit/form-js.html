@@ -199,7 +199,17 @@
             // }
 
             // second
-            if (email.validity.valueMissing) {
+            // if (email.validity.valueMissing) {
+            //     emailerror.textContent = "You need to enter an email address.";
+            // } else if (email.validity.typeMismatch) {
+            //     emailerror.textContent = "Entered value needs to be an email address.";
+            // } else if (email.validity.tooShort) {
+            //     emailerror.textContent = `Email should be at least ${email.minLength} 
+            //     characters; you entered ${email.value.length}.`
+            // }
+
+            
+            if (email.value === "") {
                 emailerror.textContent = "You need to enter an email address.";
             } else if (email.validity.typeMismatch) {
                 emailerror.textContent = "Entered value needs to be an email address.";
@@ -207,7 +217,6 @@
                 emailerror.textContent = `Email should be at least ${email.minLength} 
                 characters; you entered ${email.value.length}.`
             }
-
         });
 
 
