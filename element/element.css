@@ -194,47 +194,132 @@ hgroup > p{
 }
 
 
+/* ins element */
+ins{
+    /* position: absolute; */
+    /* width: ; */
+    margin-left: 110px;
+}
+
+ins::before {
+    position: absolute;
+    content: " [insertion start] ";
+    margin-right: 20px;
+    top: 8px;
+    left: 1px;
+    background-color: green;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+ins::after {
+    position: absolute;
+    content: " [insertion start] "; 
+    margin-left: 20px; 
+    top: 8px;
+    right: 532px;
+    background-color: green;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+/* kbd element */
+.k{
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 3px;
+    background-color: rgb(226, 220, 220);
+}
+
+
+/* main element */
+main{
+    /* background-color: whitesmoke; */
+}
 
 
 
+/* menu element  */
+/* div{
+    flex-direction: column;
+}
+menu , .menuel{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    width: 420px;
+}
+
+li {
+    flex-grow: 1;
+}
+
+button{
+    width: 100%;
+} */
+
+/* nav element */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: black;
+    padding: 0 35px;
+    width: 60%;
+    cursor: pointer;
+}
+
+ul li{
+    margin: 0 30px;
+    display: inline-block;
+}
+
+ul li a{
+    border: 2px solid white;
+    list-style: none;
+    border-radius: 5px;
+    padding: 8px;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+ul li a:hover{
+    background-color: white;
+    color: black;
+}
+h2{
+    color: wheat;
+}
 
 
 
+/* picture */
+picture img{
+    width: 200px;
+    height: 200px;
+}
+
+/* q element */
+p{
+    font-size: 20px;
+}
+s{
+    color: red;
+}
+
+
+/* section element */
+h1 , h2{
+    margin: 0;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* var element */
+var{
+    color: black;
+}
 

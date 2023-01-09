@@ -309,35 +309,219 @@
 
     <!-- hgroup element -->
     <!-- The <hgroup> HTML element represents a heading and related content. It groups a single <h1>–<h6> element with one or more <p>. -->
-    
+
     <hgroup>
         <h1>Frankenstein</h1>
         <p>Or: The Modern Prometheus</p>
     </hgroup>
 
 
+    <!-- ins element -->
+    <!-- The <ins> HTML element represents a range of text that has been added to a document. -->
+
+    <!-- attribute
+    cite -> This attribute defines the URI of a resource that explains the change, such as a link to meeting minutes or a ticket in a troubleshooting system.
+    datetime -> This attribute indicates the time and date of the change and must be a valid date with an optional time string. If the value cannot be parsed as a date with an optional time string, the element does not have an associated timestamp.  -->
+
+    <ins citr="https://en.wikipedia.org/wiki/HTML" datetime="11-01-2023">HyperText Markup Language or HTML </ins>
+
+
+    <!-- kbd element -->
+    <!-- The <kbd> HTML element represents a span of inline text denoting textual user input from a keyboard, voice input, or any other text entry device.  -->
+
+    <!-- Usage notes
+    Nesting a <kbd> element within another <kbd> element represents an actual key or other unit of input as a portion of a larger input. -->
+
+    <p>Please press <kbd class="k">Ctrl</kbd> + <kbd class="k">Shift</kbd> + <kbd class="k">R</kbd></p>
+
+
+    <!-- Sample example -->
+    <p>Use the command <kbd>help mycommand</kbd> to view documentation for the
+        <br> command "mycommand".
+    </p>
+
+
+    <!-- main element -->
+    <!-- The <main> HTML element represents the dominant content of the <body> of a document. -->
+
+
+    <main>
+        <h1>Apples</h1>
+        <p>The apple is the pomaceous fruit of the apple tree.</p>
+
+        <article>
+            <h2>Red Delicious</h2>
+            <p>
+                These bright red apples are the most common found in many supermarkets.
+            </p>
+            <p>…</p>
+            <p>…</p>
+        </article>
+
+        <article>
+            <h2>Granny Smith</h2>
+            <p>These juicy, green apples make a great filling for apple pies.</p>
+            <p>…</p>
+            <p>…</p>
+        </article>
+    </main>
 
 
 
+    <!-- menu element  -->
+    <!-- The Menu element -->
+    <!-- The <menu> HTML element is described in the HTML specification as a semantic alternative to <ul>, but treated by browsers as no different than <ul>. -->
+    <!-- It represents an unordered list of items (which are represented by <li> elements). -->
+
+    <div>
+        <a href="#">ASA’s Webb Delivers Deepest Infrared Image of Universe Yet</a>
+
+        <!-- <menu>
+            <li><button>Copy</button></li>
+            <li><button>Cut</button></li>
+            <li><button>Paste</button></li>
+        </menu>
+
+        <ul class="menuel">
+            <li><button>Copy</button></li>
+            <li><button>Cut</button></li>
+            <li><button>Paste</button></li>
+        </ul> -->
+
+    </div>
+
+
+    <!-- nav element -->
+    <!-- The Navigation Section element -->
+    <!-- The <nav> HTML element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. -->
+
+    <nav class="navbar">
+        <div>
+            <h2>LOGO</h2>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Content</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </div>
+    </nav>
 
 
 
+    <!-- output element -->
+    <!-- The Output element -->
+    <!-- The <output> HTML element is a container element into which a site or app can inject the results of a calculation or the outcome of a user action. -->
+
+    <form>
+        <input type="range" name="range" id="range" value="20"> +
+        <input type="number" name="number" id="number" value="20"> =
+        <output id="output">40</output>
+    </form>
+
+    <script>
+        const range = document.getElementById("range");
+        const number = document.getElementById("number");
+        const output = document.getElementById("output");
+
+        range.addEventListener("input", () => {
+            output.value = parseInt(range.value) + parseInt(number.value);
+        })
+    </script>
+
+    <!-- picture element -->
+    <!-- The <picture> HTML element contains zero or more <source> elements and one <img> element to offer alternative versions of an image for different display/device scenarios. -->
+
+    <!-- attribute
+    media -> The media attribute specifies a media condition (similar to a media query) that the user agent will evaluate for each <source> element.
+    srcset -> The srcset attribute is used to offer list of possible images based on size.
+    type  -->
+
+    <picture>
+        <source media="(min-width: 600px)" srcset="/image/Lighthouse.jpg">
+        <img src="/image/Desert.jpg" alt="Desert image">
+    </picture>
+
+    <picture>
+        <source srcset="logo-768.png, logo-768-1.5x.png 1.5x" />
+        <img src="logo-320.png" alt="logo" />
+    </picture>
+
+    <picture>
+        <source srcset="photo.avif" type="image/avif" />
+        <source srcset="photo.webp" type="image/webp" />
+        <img src="/image/Desert.jpg" alt="Desert image">
+    </picture>
 
 
 
+    <!-- q element -->
+    <!-- The <q> HTML element indicates that the enclosed text is a short inline quotation. Most modern browsers implement this by surrounding the text in quotation marks. -->
+
+    <!-- attribute -> city -->
+
+    <p>When Dave asks HAL to open the pod bay door, HAL answers:
+        <q cite="write url">I'm sorry, Dave. I'm afraid I can't do that.</q>
+    </p>
 
 
+    <!-- s element -->
+    <!-- The Strikethrough element -->
+    <!-- The <s> HTML element renders text with a strikethrough, or a line through it. -->
+
+    <p><s>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, dolorem! Distinctio, molestiae. Dignissimos, ut! Aliquid exercitationem vero incidunt recusandae.</s></p>
+
+    <p>SOLD OUT</p>
+     
+
+    <!-- script element -->
+    <!-- The <script> HTML element is used to embed executable code or data; this is typically used to embed or refer to JavaScript code. -->
+
+    <!-- attribute
+    src -> his attribute specifies the URI of an external script
+    type -> This attribute indicates the type of script represented.
+        moduel ->This value causes the code to be treated as a JavaScript module. -->
+
+    <script src="javascript.js"></script>
+    <script>
+        // alert("Hello world");
+    </script>
+    <script type="module" src="main.js"></script>
 
 
+    <!-- section element -->
+    <!-- The <section> HTML element represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. -->
+
+    <h1>Choosing an Apple</h1>
+
+    <section>
+        <h2>Introduction</h2>
+        <p>This document provides a guide to help with the important task of choosing the correct Apple. </p>
+    </section>
+
+    <section>
+        <h2>Criteria</h2>
+        <p>There are many different criteria to be considered when choosing an Apple — size, color, firmness, sweetness, tartness...</p>
+    </section>
+
+    
+    <!-- time element -->
+    <!-- The <time> HTML element represents a specific period in time. -->
+
+    <!-- attribute
+    datetime -> This attribute indicates the time and/or date of the element and must be in one of the formats described below. -->
+
+    <p>The concert starts at <time datetime="2018-07-07T20:00:00">20:00</time></p>
 
 
+    <!-- var element -->
+    <!-- The <var> HTML element represents the name of a variable in a mathematical expression or a programming context. -->
+    
+    <p>The volume of a box is <var>l</var> × <var> w </var> × <var>h</var>, represents the length, w the width and h the height of the box.</p>
 
-
-
-
-
-
-
+    <p>A simple equation: <var>x</var> = <var>y</var> + <var>2</var></p>
 
 </body>
 
