@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,9 @@
     <title>DOM</title>
     <link rel="stylesheet" href="dom.css">
 </head>
+
 <body onload="console.log('Welcome to my home page!')">
-    
+
     <!-- <table id="table" border="5" style="color: red;">
         <tbody>
             <tr>
@@ -19,11 +21,14 @@
         </tbody>
     </table> -->
 
-    <input type="text" name="name" id="name" placeholder="Enter your name" maxlength="15" minlength="6" maxlength="15" style="height: 10px;padding: 10px;width: 40%;border: none;"><br><br>
+    
+
+    <input type="text" name="name" id="name" placeholder="Enter your name" maxlength="15" minlength="6" maxlength="15"
+        style="height: 10px;padding: 10px;width: 40%;border: none;"><br><br>
 
 
     <input type="button" value="createtable" onclick="createtable()">
-    
+
 
     <div class="container">
         <textarea class="story"></textarea>
@@ -44,7 +49,7 @@
         <p>Necessitatibus, obcaecati. Explicabo?</p>
         <p>Nemo, cum tempore.</p>
     </div>
-        
+
     <div class="mail">
         <p>Lorem, ipsum dolor.</p>
         <p>Necessitatibus, obcaecati. Explicabo?</p>
@@ -52,9 +57,100 @@
     </div>
 
 
+    <p>Lorem, ipsum.</p>
+    <p>Lorem, ipsum dolor.</p>
+    <p>Lorem ipsum dolor sit.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
 
 
+    <!-- document.querySelectorAll() -->
+    <div class="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, voluptatem.</div>
+    <div class="alert">Lorem ipsum dolor sit amet.</div>
 
+    <div class="highlight" id="test">
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+
+    <input type="button"><input type="button"><input type="button"><input type="button">
+
+
+    <!-- nested  -->
+    <div class="outer">
+        <div class="select">
+            <p class="inner">Lorem ipsum dolor sit.</p>
+            <p class="inner">Lorem ipsum dolor sit.</p>
+        </div>
+    </div>
+
+
+    <!-- getElementByID() -->
+    <div id="getelement">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <p id="getelement"></p>
+
+    <!-- Example -->
+    <div class="box">
+        <textarea id="textarea" cols="30" rows="10" placeholder="Enter your text"></textarea>
+
+        <div class="button">
+            <button id="color-red" value="red">Red</button>
+            <button id="color-blur" value="blue">Blue</button>
+        </div>
+    </div>
+
+
+    <!-- getElementByClassName -->
+    
+    <p class="test">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, sit.</p>
+    <p class="red test1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, sit.</p>
+
+    <div class="main">
+        <p class="test2"></p>
+        <p class="test2"></p>
+        <p class="test2"></p>
+    </div>
+
+
+    <div class="access">
+        <div class="testing"></div>
+        <p class="testing"></p>
+        <p class="testing"></p>
+        <p class="testing"></p>
+    </div>
+
+
+    <!-- getElementsByTagName -->
+    <span>Some outer text</span>>
+    <span>Some outer text</span>
+
+    <div id="div1">
+        <p>Some div1 text</p>
+        <p>Some div1 text</p>
+    </div>
+
+    <div id="div2">
+        <p>Some div2 text</p>
+        <p>Some div2 text</p>
+        <p>Some div2 text</p>
+    </div>
+
+    <button onclick="AllParaElems()" id="btn"> Show all span elements in document</button><br><br>
+
+    <button onclick="div1ParaElems()"> Show all p elements in div1 document</button><br><br>
+
+    <button onclick="div2ParaElems()"> Show all p elements in div2 document</button><br><br>
+    <span>Some outer text</span>
+    <span>Some outer text</span>
+
+
+    <!-- createDocumentFragment -->
+    <ul id="ul"></ul>
 
 
 
@@ -76,4 +172,5 @@
 
     <script src="don.js"></script>
 </body>
+
 </html>
