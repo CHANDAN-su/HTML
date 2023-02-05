@@ -102,6 +102,121 @@ li{
 }
 
 
+/*  insertAdjacentElement*/
+.div3{
+    width: 60%;
+    height: 250px;
+    background-color: rgb(226, 138, 22);
+    padding: 35px 15px;
+    margin: 20px;
+}
+
+
+/* innerHTML */
+.box6{
+    width: 300px;
+    height: 250px;
+    border: 2px solid green;
+    padding: 5px;
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+
+.output{
+    margin-top: 10px;
+}
+
+
+/* element style */
+.elsyle{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+
+/* removeAttribute */
+form div{
+    display: flex;
+}
+form div span{
+    margin-right: 20px;
+}
+
+.remA{
+    width: 90px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    /* center */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.remA:hover{
+    background-color: rgb(39, 38, 38);
+}
+
+.remA:active{
+    background-color: rgb(84, 28, 214);
+}
+
+.remB{
+    /* transform: scale(0); */
+    width: 90px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    /* center */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.remB:hover{
+    background-color: rgb(39, 38, 38);
+}
+
+.remB:active{
+    background-color: rgb(84, 28, 214);
+}
+
+
+
+
+/* removeChild */
+.container div{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+div.child{
+    width: 40px;
+    height: 40px;
+    border: 2px solid red;
+    margin: 10px;
+}
+
+.container button{
+    display: block; 
+    margin-bottom: 10px;
+    width: 20%;
+}
+
 
 
 

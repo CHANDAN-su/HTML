@@ -382,10 +382,255 @@ p.appendChild(parap);
 console.log(p);
 
 
-const p1 = document.createElement("p");
-p.textContent = "My name is chandan";
-p.style.color = "Red";
-q.insertAdjacentElement("afterend", p);
+// Element.insertAdjacentElement()
+// The insertAdjacentElement() method of the Element interface inserts a given element node at a given position relative to the element it is invoked upon.
+// syntax => insertAdjacentElement(position,element);
+
+const para4 = document.createElement("p");
+const paratext = document.createTextNode("Chandan thakur");
+para4.appendChild(paratext);
+
+
+const div3 = document.querySelector(".div3");
+// div3.insertAdjacentElement("beforebegin",para4);
+// div3.insertAdjacentElement("afterbegin",para4);
+// div3.insertAdjacentElement("beforeend",para4);
+// div3.insertAdjacentElement("afterend",para4);
+
+
+
+// Element.insertAdjacentHTML()
+// The insertAdjacentHTML() method of the Element interface parses the specified text as HTML or XML and inserts the resulting nodes into the DOM tree at a specified position.
+// syntax => insertAdjacentHTML(position, text)
+
+const div5 = document.querySelector("#div4");
+const text = "<p>Chandan Thakur</p>";
+
+// div5.insertAdjacentHTML("beforebegin",text);
+// div5.insertAdjacentHTML("afterbegin","<p>Chandan Thakur</p>");
+// div5.insertAdjacentHTML("beforeend",text);
+// div5.insertAdjacentHTML("afterend",text);
+
+
+
+// Element.insertAdjacentText()
+// The insertAdjacentText() method of the Element interface, given a relative position and a string, inserts a new text node at the given position relative to the element it is called from.
+// syntax => insertAdjacentText(where, data)
+
+const div6 = document.querySelector("#div4");
+const text1 = "Chandan Thakur";
+
+// div6.insertAdjacentText("beforebegin",text1);
+// div6.insertAdjacentText("afterbegin","Chandan Thakur");
+div6.insertAdjacentText("beforeend",text1);
+// div6.insertAdjacentText("afterend",text1);
+
+
+// Element.innerHTML
+// The Element property innerHTML gets or sets the HTML or XML markup contained within the element
+
+// Appending HTML to an element
+
+const list = document.getElementById("list");
+// console.log(list);
+
+list.innerHTML = `<li><a href="#">Item ${list.children.length + 1}</a></li>`;
+
+
+
+const clickto = document.querySelector(".box6");
+clickto.addEventListener("click", (event) => {
+
+    const date = new Date();
+    const tostring = date.toLocaleTimeString();
+
+    const meg = `Event: ${event.type} at ${event.clientX} , ${event.clientY}`
+
+    const output = document.querySelector(".output");
+    output.innerHTML += `${tostring} - ${meg} <br>`
+
+});
+
+
+// clickto.addEventListener("click", clickevent);
+function clickevent(event) {
+    const date = new Date();
+    const tostring = date.toLocaleTimeString();
+
+    const meg = `Event: ${event.type} at ${event.clientX} , ${event.clientY}`
+
+    const output = document.querySelector(".output");
+    output.innerHTML += `${tostring} - ${meg} <br>`
+}
+
+
+
+// element.style
+// The style read-only property returns the inline style of an element. 
+// all styles properties for that element with values assigned for the attributes that are defined in the element's inline style attribute.
+
+// For example, element.style.backgroundColor = "red".
+
+
+const elmstyle = document.querySelector(".elsyle");
+
+elmstyle.style.border = "10px solid red";
+elmstyle.style.backgroundColor = "Black";
+elmstyle.style.marginTop = "15px";
+
+
+//element.setAttribute()
+// Sets the value of an attribute on the specified element.If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value.
+
+// Syntax => setAttribute(name , value)
+
+// Boolean attributes are considered to be true if they're present on the element at all. You should set value to the empty string ("") or the attribute's name, with no leading or trailing whitespace.
+
+const btn = document.querySelector("button");
+
+btn.setAttribute("type", "reset");
+
+btn.setAttribute("disabled", "");
+
+btn.setAttribute("State", "button");
+
+
+// remove Attribute
+btn.removeAttribute("State");
+btn.removeAttribute("disabled");
+
+
+
+// element.getAttribute()
+// The getAttribute() method of the Element interface returns the value of a specified attribute on the element.
+
+// Syntax => getAttribute(attributeName)
+
+// Return value  => A string containing the value of attributeName.
+
+const getA = document.querySelector(".div1");
+const clickbtn = document.querySelector("#click");
+
+console.log(getA.getAttribute("class")); //div
+console.log(getA.getAttribute("aling")); //null
+
+
+clickbtn.addEventListener("hover", () => {
+
+    if (getA.getAttribute('class') === 'div1') {
+        alert("Right")
+    } else {
+        alert("error");
+    }
+});
+
+
+console.log(getA.getAttribute('class') === 'div1');
+
+
+
+// Element.removeAttribute()
+// The Element method removeAttribute() removes the attribute with the specified name from the element.
+
+// Syntax => removeAttrbute(AttrName)
+
+// method 1
+// const divR = document.querySelector(".div2");
+// const btn1 = document.querySelector(".remA");
+
+// btn1.addEventListener("click",()=>{
+//     divR.removeAttribute("disabled");
+//     // btn2.style.transform = "scale(1)";
+//     // btn1.style.transform = "scale(0)";
+// });
+
+
+// const input = document.querySelector("input");
+// const btn2 = document.querySelector(".remB");
+// btn2.addEventListener("click",()=>{
+//     // btn1.style.transform = "scale(1)";
+//     // btn2.style.transform = "scale(0)";
+//     if(input.getAttribute("class") === "div2"){
+//         divR.setAttribute("disabled","");
+//     }
+// });
+
+// method 2
+const divR = document.querySelector(".div2");
+const btn1 = document.querySelector(".remA");
+
+
+btn1.addEventListener("click", () => {
+
+        divR.removeAttribute("disabled");
+        divR.setAttribute("id", "divI")
+
+        // if (divR.getAttribute("id") === "divI") {
+        if (divR.hasAttribute("id")){
+            console.log(divR.hasAttribute("id"));
+            btn1.addEventListener("click", () => {
+
+                console.log("hii");
+                divR.removeAttribute("id")
+                btn1.innerHTML = "Emable"
+                divR.setAttribute("disabled", "")
+
+            });
+
+        }
+
+        btn1.innerHTML = "Disabled"
+    
+
+});
+
+
+// Element.hasAttribute()
+// The Element.hasAttribute() method returns a Boolean value indicating whether the specified element has the specified attribute or not.
+
+// Syntax => hasAttribute(Attribute-name)
+// Return value  => A boolean.
+
+
+// Node.textContent
+// The textContent property of the Node interface represents the text content of the node and its descendants.The textContent property of the Node interface represents the text content of the node and its descendants.
+
+const div31 = document.querySelector(".div3");
+
+console.log(div31.textContent);
+
+div31.textContent = "This text is different!";
+
+
+
+// Node.removeChild()
+// The removeChild() method of the Node interface removes a child node from the DOM and returns the removed node.
+
+// Synatx => removeChild(child);
+
+const parent = document.querySelector(".Parent");
+const addChild = document.querySelector(".add-child");
+const removeChid = document.querySelector(".remove-child");
+
+
+addChild.addEventListener("click", () => {
+
+    const div = document.createElement("div");
+    div.classList.add("child");
+    div.textContent = "Hello";
+    parent.appendChild(div);
+
+});
+
+
+removeChid.addEventListener("click",() => {
+    const child = document.body.querySelector(".child");
+    parent.removeChild(child);
+});
+
+
+
+
 
 
 
