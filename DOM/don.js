@@ -381,6 +381,48 @@ p.appendChild(parap);
 
 console.log(p);
 
+// Node.removeChild()
+// The removeChild() method of the Node interface removes a child node from the DOM and returns the removed node.
+
+// Synatx => removeChild(child);
+
+const parent = document.querySelector(".Parent");
+const addChild = document.querySelector(".add-child");
+const removeChid = document.querySelector(".remove-child");
+
+
+addChild.addEventListener("click", () => {
+
+    const div = document.createElement("div");
+    div.classList.add("child");
+    div.textContent = "Hello";
+    parent.appendChild(div);
+
+});
+
+
+removeChid.addEventListener("click",() => {
+    const child = document.body.querySelector(".child");
+    parent.removeChild(child);
+});
+
+
+// replaceChild()
+// The replaceChild() method of the Node interface replaces a child node within the given (parent) node.
+// Syntax => replaceChild(newChid,OldChold)
+
+const replace = document.querySelector(".replace");
+
+const paragraph2 = document.createElement("p");
+paragraph2.textContent = "Hello world"
+
+replace.appendChild(paragraph2);
+
+const paragraph3 = document.createElement("span");
+paragraph3.textContent = "I am indian";
+
+replace.replaceChild(paragraph3,paragraph2);
+
 
 // Element.insertAdjacentElement()
 // The insertAdjacentElement() method of the Element interface inserts a given element node at a given position relative to the element it is invoked upon.
@@ -451,6 +493,8 @@ clickto.addEventListener("click", (event) => {
 
 });
 
+const access = document.querySelector(".access1");
+console.log(access.innerHTML);  //Lorem ipsum dolor sit amet.
 
 // clickto.addEventListener("click", clickevent);
 function clickevent(event) {
@@ -463,6 +507,14 @@ function clickevent(event) {
     output.innerHTML += `${tostring} - ${meg} <br>`
 }
 
+// Node.textContent
+// The textContent property of the Node interface represents the text content of the node and its descendants.The textContent property of the Node interface represents the text content of the node and its descendants.
+
+const div31 = document.querySelector(".div3");
+
+console.log(div31.textContent);
+
+div31.textContent = "This text is different!";
 
 
 // element.style
@@ -590,80 +642,4 @@ btn1.addEventListener("click", () => {
 
 // Syntax => hasAttribute(Attribute-name)
 // Return value  => A boolean.
-
-
-// Node.textContent
-// The textContent property of the Node interface represents the text content of the node and its descendants.The textContent property of the Node interface represents the text content of the node and its descendants.
-
-const div31 = document.querySelector(".div3");
-
-console.log(div31.textContent);
-
-div31.textContent = "This text is different!";
-
-
-
-// Node.removeChild()
-// The removeChild() method of the Node interface removes a child node from the DOM and returns the removed node.
-
-// Synatx => removeChild(child);
-
-const parent = document.querySelector(".Parent");
-const addChild = document.querySelector(".add-child");
-const removeChid = document.querySelector(".remove-child");
-
-
-addChild.addEventListener("click", () => {
-
-    const div = document.createElement("div");
-    div.classList.add("child");
-    div.textContent = "Hello";
-    parent.appendChild(div);
-
-});
-
-
-removeChid.addEventListener("click",() => {
-    const child = document.body.querySelector(".child");
-    parent.removeChild(child);
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

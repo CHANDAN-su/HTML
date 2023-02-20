@@ -1,0 +1,221 @@
+<!-- In particular, if a script is inside <head>, then document.body is unavailable, because the browser did not read it yet. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <!-- <script>
+        alert("Form Head: " + document.body);
+    </script> -->
+
+</head>
+
+<body>
+
+    <!-- ChildNodes -->
+    <div class="box">
+        <h1>Lorem, ipsum dolor.</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta?</p>
+        <!-- comment -->
+        <ul>
+            <li>List</li>
+            <li>List2</li>
+        </ul>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <!-- comment -->
+    </div>
+
+
+    <!-- firstChild -->
+    <div class="box1">
+        <h1>Lorem, ipsum dolor.</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta?</p>
+        <!-- comment -->
+        <ul>
+            <li>List</li>
+            <li>List2</li>
+        </ul>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <!-- comment -->
+    </div>
+
+    <!-- lastChild -->
+    <div class="box2">
+        <h1>Lorem, ipsum dolor.</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta?</p>
+        <!-- comment -->
+        <ul>
+            <li>List</li>
+            <li>List2</li>
+        </ul>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    </div>
+
+
+    <!-- nodeType , nodeName and nodeValue -->
+    <div class="nodeName-nodeType-nodeValue">
+        This is some HTML:
+        <div id="d1">Hello world</div>
+        <!-- Example of comment -->
+        Text <span>Text</span> Text<br />
+        <svg height="20" width="20">
+            <circle cx="10" cy="10" r="5" stroke="black" stroke-width="1" fill="red" />
+        </svg>
+        <hr />
+        <output id="result">Not calculated yet.</output>
+    </div>
+
+    <!-- parentNode -->
+    <div class="parent">
+        <h1 class="heading">Lorem, ipsum dolor.</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta?</p>
+        <!-- comment -->
+        <ul>
+            <li>List</li>
+            <li>List2</li>
+        </ul>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // alert("Form Body: "+ document.body);
+
+        // node 
+
+        // ChildNodes
+        // childNodes is a property of a DOM node that returns a collection of all child nodes of the node. The child nodes can be elements, text nodes, comments, or other types of nodes.
+
+        // children
+        // This means that children only includes elements that are direct children of the element, without any whitespace.
+
+        console.log("childnodes");
+        const node = document.querySelector(".box");
+        const childNodes = node.childNodes;
+        for (let i = 0; i < childNodes.length; i++) {
+            console.log(childNodes[i]);
+        }
+
+        console.log("chidren")
+        const childNodes1 = node.children;
+        for (let i = 0; i < childNodes1.length; i++) {
+            console.log(childNodes1[i]);
+        }
+
+
+        console.log(childNodes.length);
+        console.log(childNodes1.length);
+
+
+        // firstChild
+        // firstChild is a property of a DOM node that returns the first child node of the node.
+
+        // firstElementChild
+        //  firstElementChild property instead, which returns the first child element of the node.
+
+        const first = document.querySelector(".box1");
+        const firstChild = first.firstChild;
+
+        console.log(firstChild);
+
+        if (firstChild.nodeType === Node.TEXT_NODE) {
+            const value = firstChild.nodeName;
+            console.log(value);;
+
+        } else {
+            console.log("NOT a text node");
+        }
+
+        console.log(first.childNodes[0] === first.firstChild);
+
+
+        // lastChild
+        // lastChild is a property of a DOM node that returns the last child node of the node.
+
+        // lastElementChild
+        // lastElementChild property instead, which returns the last child element of the node.
+
+        const last = document.querySelector(".box2");
+        const lastChild = last.lastChild;
+
+        console.log(lastChild);
+
+        if (lastChild.nodeType === Node.TEXT_NODE) {
+            const value1 = lastChild.nodeName;
+            console.log(value1);
+
+        } else {
+            console.log("NOT a text node");
+        }
+
+        console.log(first.childNodes[first.childNodes.length - 1] === first.lastChild);
+
+
+        // nodeName
+        // nodeName: The nodeName property returns the name of the node as a string.
+
+        // nodeType
+        // nodeType: The nodeType property returns an integer value that represents the type of the node.
+
+        // nodeValue
+        // nodeValue: The nodeValue property returns the text content of a node, or null if the node is not a text node.
+
+        const nodeAll = document.querySelector(".nodeName-nodeType-nodeValue");
+        const nodeAll1 = nodeAll.childNodes;
+
+        let result = "<br/>Node names are:<br/>"
+
+        for(let i = 0 ;i<nodeAll1.length ; i++){
+            result += `<br>Node type are:  ${nodeAll1[i].nodeType}  Node name are:  ${nodeAll1[i].nodeName}  Node type are: ${nodeAll1[i].nodeValue} </br>`;
+        }
+
+        const output = document.querySelector("#result");
+        output.innerHTML = result;
+
+        // parenNode
+        // The read-only parentNode property of the Node interface returns the parent of the specified node in the DOM tree.
+        const box3 = document.querySelector(".parent");
+        const heading = document.querySelector(".heading");
+
+        const parenNode = heading.parentNode;
+        const parenNode1 = box3.parentElement;
+
+        if(parenNode.nodeName === "DIV"){
+            console.log("The parent element is a DIV element");
+        }else{
+            console.log("error");
+        }
+
+        if(parenNode1.nodeName === "BODY"){
+            console.log("The parent element is a BODY element");
+        }else{
+            console.log("error");
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>
