@@ -83,7 +83,29 @@
     </div>
 
 
+    <!-- nextSibling -->
+    <div id="div-1">Here is div-1</div>
+    <div id="div-2">Here is div-2</div>
+    <br />
+    <output><em>Not calculated.</em></output>
 
+
+    <!-- previousSibling -->
+    <img class="b0">
+    <img class="b1">
+    <img class="b2">
+
+    <!-- textContent -->
+    <div class="div3">Hii chandan</div>
+
+
+    <!-- Remove all children nested within a node -->
+    <div class="parent">
+        <p>Child 1</p>
+        <p>Child 2</p>
+        <p>Child 3</p>
+    </div>
+    <button onclick="removeChildren()">Remove Child</button>
 
 
 
@@ -101,6 +123,7 @@
         // alert("Form Body: "+ document.body);
 
         // node 
+        //*********************Instance property******************
 
         // ChildNodes
         // childNodes is a property of a DOM node that returns a collection of all child nodes of the node. The child nodes can be elements, text nodes, comments, or other types of nodes.
@@ -184,7 +207,7 @@
 
         let result = "<br/>Node names are:<br/>"
 
-        for(let i = 0 ;i<nodeAll1.length ; i++){
+        for (let i = 0; i < nodeAll1.length; i++) {
             result += `<br>Node type are:  ${nodeAll1[i].nodeType}  Node name are:  ${nodeAll1[i].nodeName}  Node type are: ${nodeAll1[i].nodeValue} </br>`;
         }
 
@@ -199,17 +222,120 @@
         const parenNode = heading.parentNode;
         const parenNode1 = box3.parentElement;
 
-        if(parenNode.nodeName === "DIV"){
+        if (parenNode.nodeName === "DIV") {
             console.log("The parent element is a DIV element");
-        }else{
+        } else {
             console.log("error");
         }
 
-        if(parenNode1.nodeName === "BODY"){
+        if (parenNode1.nodeName === "BODY") {
             console.log("The parent element is a BODY element");
-        }else{
+        } else {
             console.log("error");
         }
+
+
+
+        // nextSibling
+        // The read-only nextSibling property of the Node interface returns the node immediately following the specified one in their parent's childNodes, or returns null if the specified node is the last child in the parent element.
+        const next = document.querySelector("#div-1").nextSibling;
+        console.log(next);
+
+        console.log(next.nextSibling);
+        console.log(next.nextSibling.nextSibling);
+
+
+        // previousSibling
+        // The read-only previousSibling property of the Node interface returns the node immediately preceding the specified one in its parent's childNodes list, or null if the specified node is the first in that list.
+        const img = document.querySelector(".b0");
+        const img1 = document.querySelector(".b1");
+        const img2 = document.querySelector(".b2");
+
+        console.log(img1.previousElementSibling);
+        console.log(img2.previousElementSibling);
+        console.log(img2.previousElementSibling.previousElementSibling);
+
+        // Node.textContent
+        // The textContent property of the Node interface represents the text content of the node and its descendants.The textContent property of the Node interface represents the text content of the node and its descendants.
+
+        const div31 = document.querySelector(".div3");
+
+        console.log(div31.textContent);
+
+        div31.textContent = "This text is different!";
+        console.log(div31.textContent);
+
+
+
+        // *********************Instance methods*******************
+
+        // node.appendChild()
+        // If the given child is a reference to an existing node in the document, appendChild() moves it from its current position to the new position
+        //syntax - appendChild(echild);
+
+        const paragraph1 = document.body.appendChild(document.createElement("p"));
+
+        // Append a paragraph to the body
+        const p = document.createElement("p");
+        const parap = document.createTextNode("Lorem ipsum dolor sit amet consectetur.")
+        p.appendChild(parap);
+        // document.body.appendChild(p);
+
+        console.log(p);
+
+        // Node.removeChild()
+        // The removeChild() method of the Node interface removes a child node from the DOM and returns the removed node.
+
+        // Synatx => removeChild(child);
+
+        const parent = document.querySelector(".Parent");
+        const addChild = document.querySelector(".add-child");
+        const removeChid = document.querySelector(".remove-child");
+
+
+        // addChild.addEventListener("click", () => {
+
+        //     const div = document.createElement("div");
+        //     div.classList.add("child");
+        //     div.textContent = "Hello";
+        //     parent.appendChild(div);
+
+        // });
+
+
+        // removeChid.addEventListener("click", () => {
+        //     const child = document.body.querySelector(".child");
+        //     parent.removeChild(child);
+        // });
+
+
+        // replaceChild()
+        // The replaceChild() method of the Node interface replaces a child node within the given (parent) node.
+        // Syntax => replaceChild(newChid,OldChold)
+
+        const replace = document.querySelector(".replace");
+
+        const paragraph2 = document.createElement("p");
+        paragraph2.textContent = "Hello world"
+
+        // replace.appendChild(paragraph2);
+
+        const paragraph3 = document.createElement("span");
+        paragraph3.textContent = "I am indian";
+
+        // replace.replaceChild(paragraph3, paragraph2);
+
+
+        // Remove all children nested within a node
+        const parent1 = document.querySelector(".parent");
+
+        function removeChildren(){
+            while (parent1.firstChild) {
+                parent1.removeChild(parent1.firstChild);
+            }
+            
+        }
+
 
 
 
