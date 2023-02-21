@@ -367,63 +367,6 @@ article.textContent = 'Lorem ipsum dolor sit amet.';
 document.body.appendChild(div);
 
 
-// node.appendChild()
-// If the given child is a reference to an existing node in the document, appendChild() moves it from its current position to the new position
-//syntax - appendChild(echild);
-
-const paragraph1 = document.body.appendChild(document.createElement("p"));
-
-// Append a paragraph to the body
-const p = document.createElement("p");
-const parap = document.createTextNode("Lorem ipsum dolor sit amet consectetur.")
-p.appendChild(parap);
-// document.body.appendChild(p);
-
-console.log(p);
-
-// Node.removeChild()
-// The removeChild() method of the Node interface removes a child node from the DOM and returns the removed node.
-
-// Synatx => removeChild(child);
-
-const parent = document.querySelector(".Parent");
-const addChild = document.querySelector(".add-child");
-const removeChid = document.querySelector(".remove-child");
-
-
-addChild.addEventListener("click", () => {
-
-    const div = document.createElement("div");
-    div.classList.add("child");
-    div.textContent = "Hello";
-    parent.appendChild(div);
-
-});
-
-
-removeChid.addEventListener("click",() => {
-    const child = document.body.querySelector(".child");
-    parent.removeChild(child);
-});
-
-
-// replaceChild()
-// The replaceChild() method of the Node interface replaces a child node within the given (parent) node.
-// Syntax => replaceChild(newChid,OldChold)
-
-const replace = document.querySelector(".replace");
-
-const paragraph2 = document.createElement("p");
-paragraph2.textContent = "Hello world"
-
-replace.appendChild(paragraph2);
-
-const paragraph3 = document.createElement("span");
-paragraph3.textContent = "I am indian";
-
-replace.replaceChild(paragraph3,paragraph2);
-
-
 // Element.insertAdjacentElement()
 // The insertAdjacentElement() method of the Element interface inserts a given element node at a given position relative to the element it is invoked upon.
 // syntax => insertAdjacentElement(position,element);
@@ -506,15 +449,6 @@ function clickevent(event) {
     const output = document.querySelector(".output");
     output.innerHTML += `${tostring} - ${meg} <br>`
 }
-
-// Node.textContent
-// The textContent property of the Node interface represents the text content of the node and its descendants.The textContent property of the Node interface represents the text content of the node and its descendants.
-
-const div31 = document.querySelector(".div3");
-
-console.log(div31.textContent);
-
-div31.textContent = "This text is different!";
 
 
 // element.style
