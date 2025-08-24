@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .loader {
+            position: absolute;
+            top: calc(50% - 50px);
+            Left: calc(50% - 50px);
+            width: 300px;
+            height: 300px;
+            border: 4px solid #000;
+            border-bottom: 4px solid #3498db;
+            border-radius: 50%;
+            animation: animate 3s linear infinite;
+        }
+
+        .loader:before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            Left: 30px;
+            bottom: 30px;
+            right: 30px;
+            border: 4px solid #000;
+            border-bottom: 4px solid #e74c3c;
+            border-radius: 50%;
+            animation: animate 3s linear infinite;
+        }
+
+        .loader::after{
+            content: '';
+            position: absolute;
+            top: 52px;
+            Left:52px;
+            bottom: 52px;
+            right: 52px;
+            border: 4px solid #000;
+            border-bottom: 4px solid #2ecc71;
+            border-radius: 50%;
+            animation: animate 1s linear infinite;
+        }
+        @keyframes animate {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="loader"></div>
+
+</body>
+
+</html>

@@ -13,6 +13,7 @@
     <!-- <title>Active learning</title> -->
     <title>Document and website structure</title>
 
+    <link rel="stylesheet" href="css/index.css">
     <style>
         table {
             border-collapse: collapse;
@@ -30,9 +31,9 @@
             text-align: center;
         }
 
-        ul li{
+        ul li {
             list-style-type: none;
-            
+
         }
     </style>
 
@@ -521,9 +522,103 @@
         </ul>
 
     </form>
+    <br><br>
 
 
+    <!-- 9.  Active learning example -->
+    <!-- buildingaformstructure -->
 
+    <form>
+        <h1>Payment form</h1>
+
+        <p>Required fields are followed by
+            <strong><label>*</label></strong>
+        </p>
+
+        <section>
+            <h2>Contact informatio</h2>
+
+            <fieldset>
+                <legend>Title</legend>
+                <ul>
+                    <li>
+                        <label for="ace">
+                            <input type="radio" name="Ace" id="ace">
+                            Ace
+                        </label>
+                    </li>
+                    <li>
+                        <label for="king">
+                            <input type="radio" name="king" id="ace">
+                            King
+                        </label>
+                    </li>
+                    <li>
+                        <label for="queen">
+                            <input type="radio" name="queen" id="ace">
+                            QUeen
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <p>
+                <label for="name">
+                    <span>Name:</span>
+                    <strong><span aria-label="reuired">*</span></strong>
+                    <input type="text">
+                </label>
+            </p>
+            <p>
+                <label for="email">
+                    <span>Email:</span>
+                    <strong><span aria-label="reuired">*</span></strong>
+                    <input type="email">
+                </label>
+            </p>
+            <p>
+                <label for="password">
+                    <span>Password:</span>
+                    <strong><span aria-label="reuired">*</span></strong>
+                    <input type="password">
+                </label>
+            </p>
+        </section>
+
+        <section>
+            <h1>Payment information</h1>
+            <p>
+                <label for="care-tpe">
+                    <span>Card type:</span>
+                    <select name="data">
+                        <option value="Visa">Visa</option>
+                        <option value="mc">Mastercard</option>
+                        <option value="amex">American Express</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <label for="card-number">
+                    <span>Card Number:</span>
+                    <strong><span aria-label="reuired">*</span></strong>
+                    <input type="tel">
+                </label>
+            </p>
+            <p>
+                <label for="expiration-data">
+                    <span>Expiration date:</span>
+                    <strong><span aria-label="reuired">*</span></strong>
+                    <input type="text" placeholder="MM/YY" required>
+                </label>
+            </p>
+        </section>
+
+        <section>
+            <p>
+                <button type="sumbit">Validate the payment</button>
+            </p>
+        </section>
+    </form><br><br>
 </body>
 
 </html>

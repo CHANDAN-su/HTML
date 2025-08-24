@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File input example</title>
+    <style>
+        form{
+            border: 2px solid black;
+            background-color: wheat;
+        }
+        div{
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form>
+        <div>
+            <label for="image-upload">Choose images to upload (PNG, JPG)</label>
+            <input  type="file" name="image-upload" id="image-upload" accept=".doc, .jpg" multiple>
+        </div>
+        <div id="show">
+            <p>No files currently selected foe upload</p>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <script>
+
+        const forminput = document.querySelector("input");
+        const show = document.querySelector("#show");
+        forminput.style.visibility = "hidden"
+
+        forminput.addEventListener("change" , updateimagefie);
+        
+
+        function updateimagefie(){
+            
+            while(show.firstChild){
+                show.removeChild(show.firstChild)
+            }
+
+            const curfiles = forminput.files;
+            console.log(curfiles);
+
+            if(curfiles.length === 0){
+                const para = document.createElement("p");
+                para.textContent = "Please your file";
+                show.appendChild(para);
+            }else{
+                const list = document.createElement("ul");
+                show.appendChild(list);
+
+                
+                for(let files of curfiles){
+                    const listitem = document.createElement("li");
+                    const para = document.createElement("p");
+
+                    console.log(files)
+
+                    if(vaildition(files)){
+                        para.textContent = `File name ${files.name}, file size ${filesize(files.size)}`
+                        console.log(para)
+
+                        const image = document.createElement("img");
+                        image.src = URL.createObjectURL(files);
+
+                        listitem.appendChild(image)
+                        listitem.appendChild(para);
+                    }else{
+                        para.textContent = "Please vaild file"
+                    }
+
+                    list.appendChild(listitem);    
+                }
+                
+            }
+
+        }
+
+
+        function vaildition(file){
+            return filetype.includes(file.type)
+        }
+
+            const filetype = [
+                "image/png",
+                 "image/jpg"
+            ]
+
+        function filesize(number){
+            if (number < 1024) {
+                return `${number} bytes`;
+            }else if(number >= 1024 && number <= 1048576){
+                return `${(number / 1024).toFixed(1)} KB`;
+            }else if(number >= 1048576){
+                return `${(number/1048576).toFixed(1)} MB`
+            }
+
+            }
+
+
+
+    </script>
+
+
+</body>
+</html>

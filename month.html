@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month input fields example</title>
+</head>
+<body>
+    
+    <form>
+        <div id="month">
+            <label for="date">What date would yoou like to visit us?</label>
+            <input type="date" id="date"><br><br>
+
+            <label for="bday">What month would yoou like to visit us?</label>
+            <input type="month" id="bday"><br><br>
+
+            <label for="time">What time would yoou like to visit us?</label>
+            <input type="time" id="time"><br><br>
+            
+            <label for="week">What time would yoou like to visit us?</label>
+            <input type="week" id="week"><br><br>
+
+        </div>
+        <div id="month-year">
+            <p>What month would you like to visit us?</p>
+
+            <span id="day-count">
+                <label for="bday-day">Day:</label>
+                <select id="bday-day"></select>
+            </span>
+
+            <span id="month-count">
+                <label for="bday-month1">Month:</label>
+                <select id="bday-month">
+                    <!-- 
+                    monthoption() ke liye
+                    <option value="0">January</option>
+                    <option value="1">February</option>
+                    <option value="2">March</option>
+                    <option value="3">April</option>
+                    <option value="4">May</option>
+                    <option value="5">June</option>
+                    <option value="6">July</option>
+                    <option value="7">August</option>
+                    <option value="8">September</option>
+                    <option value="9">October</option>
+                    <option value="10">November</option>
+                    <option value="11">December</option>
+                    <option value="12">12</option> -->
+
+
+                    <!-- day ke liye -->
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                    
+                </select>
+            </span>
+
+            <span id="year-count">
+                <label for="bday-year">Year:</label>
+                <select id="bday-year"></select>
+            </span>
+
+            <span id="hour-count">
+                <label for="bday-hour">Hour:</label>
+                <select id="bday-hour"></select>
+            </span>
+            
+            <span id="minute-count">
+                <label for="bday-minute">Minute:</label>
+                <select id="bday-minute"></select>
+            </span>
+
+            <span id="week-count">
+                <label for="bday-week">week:</label>
+                <select id="bday-week"></select>
+            </span>
+
+        </div>
+
+    </form>
+
+
+    <script src="month.js"></script>
+</body>
+</html>

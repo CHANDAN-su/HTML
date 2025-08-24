@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button input example</title>
+</head>
+
+<body>
+
+      <!-- color Full example -->
+
+        <p>
+            An example demonstrating the use of the
+            <code>&lt;input type="color"&gt;</code> control.
+        </p>
+
+        <label for="colorWell">Color</label>
+        <input type="color" value="#ff0000" id="colorWell">
+
+        <p>
+            Watch the paragraph colors change when you adjust the color picker. As you
+            make changes in the color picker, the first paragraph's color changes, as a
+            preview (this uses the <code>input</code> event). When you close the color
+            picker, the <code>change</code> event fires, and we detect that to change
+            every paragraph to the selected color.
+        </p>       
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt illum distinctio exercitationem dolor dolores.</p> 
+
+      
+         <script>
+
+            let colorWell = document.querySelector("#colorWell");
+            const defaultColor = "#0000ff";  //blue color
+
+            window.addEventListener("load", startup, false);
+
+            function startup() {
+                colorWell.value = defaultColor;
+                colorWell.addEventListener("input", updateFirst, false);
+                colorWell.addEventListener("change", updateAll, false);
+            }
+
+            function updateFirst(event) {
+                const p = document.querySelector("p");
+                    p.style.color = event.target.value;
+            }
+
+            function updateAll(event) {
+                document.querySelectorAll("p").forEach((p) => {
+                    p.style.color = event.target.value;
+                });
+            }
+
+        </script>
+
+
+
+
+</body>
+
+</html>
